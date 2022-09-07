@@ -2053,12 +2053,18 @@ input, select, textarea {
 			color: inherit;
 		}
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container div {
+  margin: auto; 
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   margin: auto;
+  width: 1280px;
+  text-align: center;
+}
+.slides_container {
+    margin: 0px auto;
 }
 
 /* Next & previous buttons */
@@ -2085,10 +2091,10 @@ input, select, textarea {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 50px;
   width: 100%;
   text-align: center;
 }
@@ -2189,6 +2195,7 @@ input, select, textarea {
 
    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {display: none;}
 	.topnav a.icon {
 	  float: right;
 	  display: block;
