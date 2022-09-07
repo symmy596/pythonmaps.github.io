@@ -2204,7 +2204,7 @@ input, select, textarea {
   @media screen and (max-width: 600px) {
 	.topnav.responsive {position: relative;}
 	.topnav.responsive a.icon {
-	  position: absolute;
+	  position: fixed;
 	  right: 10;
 	  top: 0;
 	  color: white;
