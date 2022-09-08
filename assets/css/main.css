@@ -72,7 +72,7 @@
 }
 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, h1, h2, h3, h4, h5, h6, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -239,7 +239,7 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5 {
 		color: #FFFFFF;
 		font-weight: 600;
 		letter-spacing: 0.1em;
@@ -249,7 +249,7 @@ input, select, textarea {
 		text-align: center;
 	}
 
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		h1 a, h2 a, h3 a, h4 a, h5 a {
 			color: inherit;
 			text-decoration: none;
 		}
@@ -275,10 +275,17 @@ input, select, textarea {
 	}
 
 	h6 {
-		font-size: 0.7em;
+		color: #FFFFFF;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		line-height: 1.5;
+		margin: 0 0 1em 0;
+		text-transform: uppercase;
+		text-align: left;
+		font-size: 1em;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 600px) {
 
 		h2 {
 			font-size: 1em;
@@ -1056,6 +1063,26 @@ input, select, textarea {
 			table.alt tfoot {
 				border-top: 0;
 			}
+
+.media {
+	padding: 4em 0em 2em 4em ;
+	background: rgba(36, 38, 41, 0.975);
+}
+.media h4 {
+	font-size: 1.5em;
+}
+.media h5 {
+	color: #FFFFFF;
+	text-transform: none;
+	font-size: 1.3em;
+}
+.media p {
+	font-size: 1.2em;
+	margin: 0 0 0em 0;
+}
+.media li {
+	font-size: 1.2em;
+}
 
 /* Panel */
 
@@ -2074,7 +2101,7 @@ input, select, textarea {
   position: fixed;
   border-radius: 0%;
   border-color: #090909;
-  top: 50%;
+  top: 60%;
   width: auto;
   padding: 25px;
   margin-top: -22px;
@@ -2141,12 +2168,11 @@ input, select, textarea {
   .prev, .next,.text {font-size: 11px}
 }
 
- /* Add a black background color to the top navigation */
- .topnav {
+
+.topnav {
 	background-color: #333;
 	overflow: hidden;
   }
-  
   /* Style the links inside the navigation bar */
   .topnav a {
 	float: left;
@@ -2166,10 +2192,6 @@ input, select, textarea {
 	letter-spacing: 0.1em;
 	padding: 0 1.65em;
 	text-transform: uppercase;
-	bottom: -1em;
-	height: 4em;
-	left: 0;
-	padding: 0 1.5em;
 	z-index: 10002;
 	transform: translateY(0);
 	-ms-transform: translateY(0);
@@ -2193,7 +2215,9 @@ input, select, textarea {
 	color: white;
   }
   
-
+  .topnav .icon {
+	display: none;
+  }
    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
 	.topnav a:not(:first-child) {display: none;}
@@ -2202,15 +2226,16 @@ input, select, textarea {
 	  display: block;
 	}
   }
-  
+
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
 	.topnav.responsive {position: relative;}
 	.topnav.responsive a.icon {
-	  position: absolute;
-	  right: 10;
-	  top: 0;
-	  color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	right: -10;
 	}
 	.topnav.responsive a {
 	  float: none;
@@ -2336,3 +2361,26 @@ input, select, textarea {
     display: block;
     margin: auto;
 }
+
+ /* Dashed border */
+ hr.dashed {
+	border-top: 3px dashed #bbb;
+  }
+  
+  /* Dotted border */
+  hr.dotted {
+	border-top: 3px dotted #bbb;
+  }
+  
+  /* Solid border */
+  hr.solid {
+	border-top: 3px solid #bbb;
+  }
+  
+  /* Rounded border */
+  hr.rounded {
+	border-top: 2px solid #bbb;
+	border-radius: 2px;
+	padding: 2;
+	margin-right: 4em;
+  } 
