@@ -2088,6 +2088,8 @@ input, select, textarea {
   position: relative;
   margin: auto;
   text-align: center;
+  font-size: small;
+
 }
 .slides_container {
     margin: 0px auto;
