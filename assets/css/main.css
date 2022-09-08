@@ -2082,17 +2082,18 @@ input, select, textarea {
 		}
 /* Slideshow container */
 .slideshow-container div {
-  margin: auto; 
-  max-width: 1300px;
+  margin: 0 auto; 
   margin-left: auto;
   margin-right: auto;
   position: relative;
   margin: auto;
-  width: 1280px;
   text-align: center;
 }
 .slides_container {
     margin: 0px auto;
+}
+.slides_container img{
+	object-fit: contain;
 }
 
 /* Next & previous buttons */
