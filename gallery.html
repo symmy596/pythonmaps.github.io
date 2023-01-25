@@ -9,68 +9,10 @@
 	gtag('js', new Date());
 	gtag('config', 'G-3REDW7D1FD', { 'anonymize_ip': true });
 	</script>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
-	<script>
-	window.addEventListener('load', function(){
-	  window.cookieconsent.initialise({
-	   revokeBtn: "<div class='cc-revoke'></div>",
-	   type: "opt-in",
-	   theme: "classic",
-	   palette: {
-		   popup: {
-			   background: "#000",
-			   text: "#fff"
-			},
-		   button: {
-			   background: "#fd0",
-			   text: "#000"
-			}
-		},
-	   content: {
-		   link: "Cookies",
-		   href: "https://2gdpr.com/cookies"
-		},
-		onInitialise: function(status) {
-		  if(status == cookieconsent.status.allow) myScripts();
-		},
-		onStatusChange: function(status) {
-		  if (this.hasConsented()) myScripts();
-		}
-	  })
-	});
-	
-	function myScripts() {
-	
-	   // Paste here your scripts that use cookies requiring consent. See examples below
-	
-	   // Google Analytics, you need to change 'UA-00000000-1' to your ID
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-00000000-1', 'auto');
-		  ga('send', 'pageview');
-	
-	
-	   // Facebook Pixel Code, you need to change '000000000000000' to your PixelID
-		  !function(f,b,e,v,n,t,s)
-		  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-			  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-			  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-			  n.queue=[];t=b.createElement(e);t.async=!0;
-			  t.src=v;s=b.getElementsByTagName(e)[0];
-			  s.parentNode.insertBefore(t,s)}(window, document,'script',
-			  'https://connect.facebook.net/en_US/fbevents.js');
-		  fbq('init', '000000000000000');
-		  fbq('track', 'PageView');
-	
-	}
-	</script>
 
 		<title>PythonMaps</title>
 		<link rel = "icon" href = 
-		"resources/images/fulls/logo.png" 
+		"resources/images/fulls/globe.png" 
 				type = "image/x-icon">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -93,10 +35,10 @@
 				<!-- Main -->
 				<div class="row">
                     <div class="column">
-					  <img class="myImg" src="resources/images/thumbs/africa_low_res.png" alt="African Population Density" loading="lazy">
+					  <img class="myImg" src="resources/images/fulls/africa_website.jpeg" alt="African Population Density" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/africa_high_res.png" id="img01">
+						  <img class="modal-content" src="resources/images/fulls/africa_website.jpeg" id="img01">
 						  <div id="caption"></div>
 						</div> 
 					<img class="myImg" src="resources/images/thumbs/airways_airports_low_res.png" alt="The World's Airports and Airways" loading="lazy">
@@ -105,16 +47,16 @@
 						  <img class="modal-content" src="resources/images/fulls/airways_airports_high_res.png" id="img04">
 						  <div id="caption"></div>
 						</div> 
-					<img class="myImg" src="resources/images/thumbs/namerica_low_res.png" alt="North American Rivers" loading="lazy">
+					<img class="myImg" src="resources/images/fulls/namerica_website.jpeg" alt="North American Rivers" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/namerica_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/namerica_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div> 
-					  <img class="myImg" src="resources/images/thumbs/airports_dark_low_res.png" alt="The World's Airports" loading="lazy">
+					  <img class="myImg" src="resources/images/fulls/eu_website.jpeg" alt="The World's Airports" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/airports_dark_high_res.png" id="img02">
+						  <img class="modal-content" src="resources/images/fulls/eu_website.jpeg" id="img02">
 						  <div id="caption"></div>
 						</div> 
 					<img class="myImg" src="resources/images/thumbs/CO_low_res.png" alt="The WOrld's Carbon Monoxide Emissions" loading="lazy">
@@ -123,31 +65,31 @@
 						  <img class="modal-content" src="resources/images/fulls/CO_high_res.png" id="img05">
 						  <div id="caption"></div>
 						</div> 
-					<img class="myImg" src="resources/images/thumbs/raj_low_res.png" alt="The Population density of the British Raj" loading="lazy">
+					<img class="myImg" src="resources/images/fulls/raj_website.jpeg" alt="The Population density of the British Raj" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/raj_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/raj_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
-					  <img class="myImg" src="resources/images/thumbs/bangladesh_pop_low_res.png" alt="The Population density of Bangladesh" loading="lazy">
+					  <img class="myImg" src="resources/images/fulls/bangladesh_website.jpeg" alt="The Population density of Bangladesh" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/bangladesh_pop_high_res.png" id="img05">
+						  <img class="modal-content" src="resources/images/fulls/bangladesh_website.jpeg" id="img05">
 						  <div id="caption"></div>
 						</div>           
-					<img class="myImg" src="resources/images/thumbs/south_america_low_res.png" alt="The Population density of South America" loading="lazy">
+					<img class="myImg" src="resources/images/fulls/south_america_website.jpeg" alt="The Population density of South America" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/south_america_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/south_america_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
                     </div>
 
                     <div class="column">
-					<img class="myImg" src="resources/images/thumbs/shipping_lanes_low_res.png" alt="The World's Shipping Lanes" loading="lazy">
+					<img class="myImg" src="resources/images/fulls/sl_website.jpeg" alt="The World's Shipping Lanes" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/shipping_lanes_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/sl_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
 					<img class="myImg" src="resources/images/fulls/europe_roads.jpg" alt="The Roads of Europe" loading="lazy">
@@ -174,10 +116,10 @@
 						  <img class="modal-content" src="resources/images/fulls/eez_high_res.png" id="img07">
 						  <div id="caption"></div>
 						</div>  
-					  <img class="myImg" src="resources/images/thumbs/europe_low_res.png" alt="The Population density of Europe" loading="lazy">
+					  <img class="myImg" src="resources/images/fulls/europe_website.jpeg" alt="The Population density of Europe" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/europehigh_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/europe_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
 					  <img class="myImg" src="resources/images/thumbs/world_low_res.png" alt="The World's Population Density" loading="lazy">
@@ -207,28 +149,28 @@
 
                     </div>
                     <div class="column">
-					  <img class="myImg" src="resources/images/thumbs/egypt_low_res.png" alt="The Population density of Egypt" loading="lazy">
+					  <img class="myImg" src="resources/images/fulls/egypt_website.jpeg" alt="The Population density of Egypt" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/egypt_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/egypt_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
-					<img class="myImg" src="resources/images/thumbs/africa_rivers_low_res.png" alt="African Rivers" loading="lazy">
+					<img class="myImg" src="resources/images/fulls/africa_rivers_website.jpeg" alt="African Rivers" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/africa_rivers_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/africa_rivers_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
-					  <img class="myImg" src="resources/images/thumbs/middle_east_low_res.png" alt="The Population density of the Middle East" loading="lazy">
+					  <img class="myImg" src="resources/images/fulls/north_america_website.jpeg" alt="The Population density of North America" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/middle_east_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/north_america_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
-					  <img class="myImg" src="resources/images/thumbs/north_america_low_res.png" alt="The Population density of North America" loading="lazy">
+					<img class="myImg" src="resources/images/fulls/seasia_website.jpeg" alt="The Rivers of South East Asia" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/north_america_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/seasia_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
 					<img class="myImg" src="resources/images/thumbs/afghanistan_low_res.png" alt="The Topography of Afghanistan" loading="lazy">
@@ -237,22 +179,16 @@
 						  <img class="modal-content" src="resources/images/fulls/afghanistan_high_res.png" id="img03">
 						  <div id="caption"></div>
 						</div> 
-					  <img class="myImg" src="resources/images/thumbs/pipelines_low_res.png" alt="The World's Pipelines" loading="lazy">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/pipelines_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
 					  <img class="myImg" src="resources/images/thumbs/undersea_cables_low_res.png" alt="The World's Undersea Cables" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
 						  <img class="modal-content" src="resources/images/fulls/undersea_cables_high_res.png" id="img07">
 						  <div id="caption"></div>
 						</div>  
-					  <img class="myImg" src="resources/images/thumbs/usa_low_res.png" alt="The Population density of the USA" loading="lazy">
+					  <img class="myImg" src="resources/images/fulls/usa_website.jpeg" alt="The Population density of the USA" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/usa_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/usa_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
 					<img class="myImg" src="resources/images/thumbs/iran_low_res.png" alt="The Topography of Iran" loading="lazy">
@@ -264,10 +200,10 @@
                     </div>
 
 					<div class="column">
-					<img class="myImg" src="resources/images/thumbs/samerica_low_res.png" alt="South American Rivers" loading="lazy">
+					<img class="myImg" src="resources/images/fulls/samerica_website.jpeg" alt="South American Rivers" loading="lazy">
 						<div id="myModal" class="modal">
 						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/samerica_high_res.png" id="img07">
+						  <img class="modal-content" src="resources/images/fulls/samerica_website.jpeg" id="img07">
 						  <div id="caption"></div>
 						</div>  
 						<img class="myImg" src="resources/images/thumbs/Ports_low_res.png" alt="The World's Ports" loading="lazy">
@@ -288,16 +224,16 @@
 							<img class="modal-content" src="resources/images/fulls/pakistan_high_res.png" id="img03">
 							<div id="caption"></div>
 						  </div> 
-						<img class="myImg" src="resources/images/thumbs/se_asia_low_res.png" alt="The Population density of South East Asia" loading="lazy">
+						<img class="myImg" src="resources/images/fulls/se_asia_website.jpeg" alt="The Population density of South East Asia" loading="lazy">
 						  <div id="myModal" class="modal">
 							<span class="close">&times;</span>
-							<img class="modal-content" src="resources/images/fulls/se_asia_high_res.png" id="img07">
+							<img class="modal-content" src="resources/images/fulls/se_asia_website.jpeg" id="img07">
 							<div id="caption"></div>
 						  </div>  
-						<img class="myImg" src="resources/images/thumbs/china_low_res.png" alt="The Population density of China" loading="lazy">
+						<img class="myImg" src="resources/images/fulls/china_website.jpeg" alt="The Population density of China" loading="lazy">
 						  <div id="myModal" class="modal">
 							<span class="close">&times;</span>
-							<img class="modal-content" src="resources/images/fulls/china_high_res.png" id="img07">
+							<img class="modal-content" src="resources/images/fulls/china_website.jpeg" id="img07">
 							<div id="caption"></div>
 						  </div>  
 						<img class="myImg" src="resources/images/thumbs/bangladesh_low_res.png" alt="The Topography of Bangladesh" loading="lazy">
