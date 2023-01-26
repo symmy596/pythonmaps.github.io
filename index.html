@@ -1,22 +1,16 @@
 <!DOCTYPE HTML>
 <html>
-	<head>	
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-PH8BQFC');</script>
-	<!-- End Google Tag Manager -->
+	<head>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3REDW7D1FD"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'G-3REDW7D1FD');
+	gtag('config', 'G-3REDW7D1FD', { 'anonymize_ip': true });
 	</script>
-	<title>PythonMaps</title>
+
+		<title>PythonMaps</title>
 		<link rel = "icon" href = 
 		"resources/images/fulls/globe.png" 
 				type = "image/x-icon">
@@ -26,49 +20,248 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body>
-	<!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH8BQFC"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
 	</script>
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Header -->
-					<div class="topnav" id="myTopnav">
-						<a href="index.html" class="active"><strong>PythonMaps</strong></a>
-						<a href="#about">About</a>
-						<a href="#Services">Services</a>
-						<a href="media.html">Media</a>		
-						<a href="gallery.html">Gallery</a>
-						<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i>  </a>
-					</div>
+				<div class="topnav" id="myTopnav">
+					<a href="index.html" class="active"><strong>PythonMaps</strong></a>
+					<a href="#about">About</a>
+					<a href="#Services">Services</a>
+					<a href="media.html">Media</a>		
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i>  </a>
+				</div>
 				<!-- Main -->
-				
-					<img src="resources/images/fulls/sl_website2.jpeg" loading="lazy" style="width:100%" class="center">
-					<div class="text">
-						<a href="https://www.etsy.com/shop/PythonMaps">Buy this map</a>
-						</div>
+				<div class="row">
+                    <div class="column">
+					  <img class="myImg" src="resources/images/fulls/africa_website.jpeg" alt="African Population Density" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/africa_website.jpeg" id="img01">
+						  <div id="caption"></div>
+						</div> 
+					<img class="myImg" src="resources/images/fulls/namerica_website.jpeg" alt="North American Rivers" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/namerica_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div> 
+					<img class="myImg" src="resources/images/fulls/airways_airports_website.jpeg" alt="The World's Airports and Airways" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/airways_airports_website.jpeg" id="img04">
+						  <div id="caption"></div>
+						</div> 
+					  <img class="myImg" src="resources/images/fulls/eu_website.jpeg" alt="The Rivers of Europe" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/eu_website.jpeg" id="img02">
+						  <div id="caption"></div>
+						</div> 
+					<img class="myImg" src="resources/images/fulls/CO_website.jpeg" alt="The WOrld's Carbon Monoxide Emissions" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/CO_website.jpeg" id="img05">
+						  <div id="caption"></div>
+						</div> 
+					<img class="myImg" src="resources/images/fulls/raj_website.jpeg" alt="The Population density of the British Raj" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/raj_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					  <img class="myImg" src="resources/images/fulls/bangladesh_website.jpeg" alt="The Population density of Bangladesh" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/bangladesh_website.jpeg" id="img05">
+						  <div id="caption"></div>
+						</div>           
+					<img class="myImg" src="resources/images/fulls/south_america_website.jpeg" alt="The Population density of South America" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/south_america_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>      
+                    </div>
+
+                    <div class="column">
+					<img class="myImg" src="resources/images/fulls/sl_website.jpeg" alt="The World's Shipping Lanes" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/sl_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					<img class="myImg" src="resources/images/fulls/europe_roads.jpg" alt="The Roads of Europe" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/europe_roads.jpg" id="img05">
+						  <div id="caption"></div>
+						</div> 
+					<img class="myImg" src="resources/images/fulls/forests_website.jpeg" alt="The World's Forests" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/forests_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					  <img class="myImg" src="resources/images/fulls/co2_website.jpeg" alt="The World's Carbon Dioxide Emissions" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/co2_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					<img class="myImg" src="resources/images/fulls/greece_website.jpeg" alt="The Topography of Greece" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/greece_website.jpeg" id="img03">
+						  <div id="caption"></div>
+						</div>  
+					  <img class="myImg" src="resources/images/fulls/samerica_forests_website.jpeg" alt="The Forests of South America" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/samerica_forests_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					<img class="myImg" src="resources/images/fulls/ireland_website.jpeg" alt="The World's Railways" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/ireland_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div> 
+					  <img class="myImg" src="resources/images/fulls/europe_website.jpeg" alt="The Population density of Europe" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/europe_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+ 
+                    </div>
+                    <div class="column">
+					  <img class="myImg" src="resources/images/fulls/egypt_website.jpeg" alt="The Population density of Egypt" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/egypt_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					<img class="myImg" src="resources/images/fulls/africa_rivers_website.jpeg" alt="African Rivers" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/africa_rivers_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					  <img class="myImg" src="resources/images/fulls/north_america_website.jpeg" alt="The Population density of North America" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/north_america_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					<img class="myImg" src="resources/images/fulls/seasia_website.jpeg" alt="The Rivers of South East Asia" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/seasia_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					<img class="myImg" src="resources/images/fulls/cables_website.jpeg" alt="The World's Undersea Cables" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/cables_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div> 
+					<img class="myImg" src="resources/images/fulls/afghanistan_website.jpeg" alt="The Topography of Afghanistan" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/afghanistan_website.jpeg" id="img03">
+						  <div id="caption"></div>
+						</div> 
+					  <img class="myImg" src="resources/images/fulls/usa_website.jpeg" alt="The Population density of the USA" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/usa_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+					<img class="myImg" src="resources/images/thumbs/iran_low_res.png" alt="The Topography of Iran" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/iran_high_res.png" id="img03">
+						  <div id="caption"></div>
+						</div> 
+					<img class="myImg" src="resources/images/fulls/ch4_website.jpeg" alt="The World's Methane Emissions" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/ch4_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div> 
+                    </div>
+
+					<div class="column">
+					<img class="myImg" src="resources/images/fulls/samerica_website.jpeg" alt="South American Rivers" loading="lazy">
+						<div id="myModal" class="modal">
+						  <span class="close">&times;</span>
+						  <img class="modal-content" src="resources/images/fulls/samerica_website.jpeg" id="img07">
+						  <div id="caption"></div>
+						</div>  
+						<img class="myImg" src="resources/images/thumbs/Ports_low_res.png" alt="The World's Ports" loading="lazy">
+						  <div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" src="resources/images/fulls/Ports_high_res.png" id="img07">
+							<div id="caption"></div>
+						  </div>  
+						<img class="myImg" src="resources/images/fulls/pakistan_website.jpeg" alt="The Topography of Pakistan" loading="lazy">
+						  <div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" src="resources/images/fulls/pakistan_website.jpeg" id="img03">
+							<div id="caption"></div>
+						  </div>
+						<img class="myImg" src="resources/images/fulls/airways_website.jpeg" alt="The World's Airways" loading="lazy">
+						  <div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" src="resources/images/fulls/airways_website.jpeg" id="img03">
+							<div id="caption"></div>
+						  </div> 
+						<img class="myImg" src="resources/images/fulls/se_asia_website.jpeg" alt="The Population density of South East Asia" loading="lazy">
+						  <div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" src="resources/images/fulls/se_asia_website.jpeg" id="img07">
+							<div id="caption"></div>
+						  </div>  
+						<img class="myImg" src="resources/images/fulls/china_website.jpeg" alt="The Population density of China" loading="lazy">
+						  <div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" src="resources/images/fulls/china_website.jpeg" id="img07">
+							<div id="caption"></div>
+						  </div>  
+						<img class="myImg" src="resources/images/thumbs/bangladesh_low_res.png" alt="The Topography of Bangladesh" loading="lazy">
+						  <div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" src="resources/images/fulls/bangladesh_high_res.png" id="img03">
+							<div id="caption"></div>
+						  </div> 
+						<img class="myImg" src="resources/images/fulls/world_popdens_website.jpeg" alt="The World's Population Density" loading="lazy">
+						  <div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" src="resources/images/fulls/world_popdens_website.jpeg" id="img07">
+							<div id="caption"></div>
+						  </div>
+					</div>
 				<!-- Footer -->
-					<footer id="about" class="panel">
-						<div>
-							<section>
-								<h2>PythonMaps by Dr. Adam Symington</h2>
-								<p>The PythonMaps project aims to generate informative visualisations showing the world in new and interesting lights, in an artistic fashion. We also aim to show off the incredible utility of the Python programming language as well as the beautiful visualisations that are possible. </p>
-								<p>Dr. Adam Symington is a geospatial data scientist, leading the data science team at Geollect Ltd in the United Kingdom. Over the last two years he has developed exceptional geospatial data science skills and worked on projects with a variety of data sources across multiple sectors. Prior to his career in data science Adam was a computational chemist at the University of Bath in England where he used machine learning and other statistical techniques to predict the properties of materials. Adam has published 17 peer reviewed research papers, including 3 open source software papers, writes about geospatial data science on towards data science and runs the PythonMaps project, a project designed to spread the love of geospatial data through eye-catching visualisation. </p>
-							</section>
-							
-							<section>
-								<h6>Follow me on ...</h6>
-								<ul class="icons">
-									<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-								</ul>
-							</section>
-						</div>
-				</footer>
+				<footer id="about" class="panel">
+					<div>
+						<section>
+							<h2>PythonMaps by Dr. Adam Symington</h2>
+							<p>The PythonMaps project aims to generate informative visualisations showing the world in new and interesting lights, in an artistic fashion. We also aim to show off the incredible utility of the Python programming language as well as the beautiful visualisations that are possible. </p>
+							<p>Dr. Adam Symington is a geospatial data scientist, leading the data science team at Fraym in the Washington DC. Over the last seven years he has worked on a wide range of projects across multiple companies, universities and sectors. Prior to his career in data science Adam was a computational chemist at the University of Bath in England where he used machine learning and other statistical techniques to predict the properties of materials. Adam has published 17 peer reviewed research papers, including 3 open source software papers, writes about geospatial data science on towards data science and runs the PythonMaps project, a project designed to spread the love of geospatial data through eye-catching visualisation. </p>
+						</section>
+						<section>
+							<h6>Follow me on ...</h6>
+							<ul class="icons">
+								<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
+							</ul>
+						</section>
+					</div>
+			</footer>
 				<footer id="Services" class="panel">
 					<div>
 						<section>
@@ -110,24 +303,6 @@
 				</section>
 			</div>
 	</footer>
-	<footer id="Buy" class="panel">
-		<div>
-			<section>
-				<p>Please contact me at symmy586@gmail.com for more details. We are working on an online store but for now we offer bespoke visualisations on request.</p>
-
-			</section>
-			<section>
-				<h6>Follow me on ...</h6>
-				<ul class="icons">
-					<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-				</ul>
-			</section>
-		</div>
-</footer>
 			</div>
 
 		<!-- Scripts -->
@@ -139,5 +314,6 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/myfunction.js"></script>
+			<script src="assets/js/popup.js"></script>
 	</body>
 </html>
