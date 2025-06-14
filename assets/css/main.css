@@ -2393,3 +2393,144 @@ input, select, textarea {
 	padding: 2;
 	margin-right: 4em;
   } 
+
+/* Mission Statement Styles */
+.mission-statement {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 2em;
+    text-align: center;
+}
+
+.mission-statement h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.mission-statement p {
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 736px) {
+    .mission-statement {
+        padding: 0 1em;
+    }
+    
+    .mission-statement h2 {
+        font-size: 2em;
+    }
+    
+    .mission-statement p {
+        font-size: 1.1em;
+    }
+}
+
+/* Tutorials Page Styles */
+.tutorials-container {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 2em;
+}
+
+.tutorials-list h2 {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #333;
+}
+
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.tutorial-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+}
+
+.tutorial-card h3 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.tutorial-card p {
+    color: #666;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
+.tutorial-card .button {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.tutorial-card .button:hover {
+    background: #45a049;
+}
+
+@media screen and (max-width: 736px) {
+    .tutorials-container {
+        padding: 0 1em;
+    }
+    
+    .tutorial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.coming-soon {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.coming-soon h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.coming-soon p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .coming-soon {
+        padding: 1rem;
+        margin: 2rem auto;
+    }
+
+    .coming-soon h1 {
+        font-size: 2rem;
+    }
+
+    .coming-soon p {
+        font-size: 1.1rem;
+    }
+}

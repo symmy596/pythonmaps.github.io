@@ -1,20 +1,46 @@
-// Get the modal
-var modal = document.getElementById('myModal');
+// Get all modals
+var modals = document.getElementsByClassName('modal');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = $('.myImg');
-var modalImg = $("#img01");
-var captionText = document.getElementById("caption");
-$('.myImg').click(function(){
-    modal.style.display = "block";
-    var newSrc = this.src;
-    modalImg.attr('src', newSrc);
-    captionText.innerHTML = this.alt;
+// Add click event to all images
+document.querySelectorAll('.myImg').forEach(function(img) {
+    img.addEventListener('click', function() {
+        // Find the modal that's a sibling of this image
+        var modal = this.nextElementSibling;
+        if (modal && modal.classList.contains('modal')) {
+            // Get the modal content image
+            var modalImg = modal.querySelector('.modal-content');
+            // Get the caption element
+            var caption = modal.querySelector('#caption');
+            
+            // Set the source using data-src if available
+            var newSrc = this.getAttribute('data-src') || this.src;
+            modalImg.src = newSrc;
+            
+            // Set the caption
+            if (caption) {
+                caption.innerHTML = this.alt;
+            }
+            
+            // Show the modal
+            modal.style.display = "block";
+        }
+    });
 });
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("modal")[0];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+// Add click event to all close buttons
+document.querySelectorAll('.close').forEach(function(closeBtn) {
+    closeBtn.addEventListener('click', function() {
+        // Find the parent modal and hide it
+        var modal = this.closest('.modal');
+        if (modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+});
