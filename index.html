@@ -126,6 +126,12 @@ figure.plate{margin:0}
 .commission .close{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
 .commission .price{font-size:clamp(22px,2.6vw,28px);font-family:var(--disp);color:var(--text)}
 .commission .price span{color:var(--muted);font-family:"IBM Plex Sans",sans-serif;font-size:15px;display:block;margin-top:4px}
+.commission .proof{list-style:none;display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline;margin-top:24px}
+.commission .proof .lbl{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);width:100%;margin-bottom:2px}
+.commission .proof li:not(.lbl){font-family:var(--disp);font-size:clamp(18px,1.9vw,23px);color:var(--text);opacity:.85}
+.commission .proof li:not(.lbl):not(:last-child)::after{content:" ·";color:var(--muted)}
+.commission .retainer{color:var(--muted);max-width:64ch;font-style:italic;margin-top:10px}
+.commission .prompt{color:var(--text);max-width:60ch;margin-top:34px;opacity:.92}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:clamp(36px,6vw,80px);align-items:start}
@@ -220,7 +226,13 @@ footer.site a:hover{color:var(--accent)}
   <div class="wrap">
     <div class="sec-head reveal"><span class="eyebrow">Commission</span><h2>Commission a map</h2></div>
     <p class="lead reveal">Every map starts with a question: what does this data actually look like, and who needs to see it? I build each one from the raw sources, with a projection and palette chosen for the job, and deliver it at the resolution it will be printed or published. The result is a single image that carries a dataset a lot further than a chart can.</p>
-    <p class="sub reveal">Past commissions have appeared in national press and academic work, for marketing agencies, journalists, publishers, authors, and government departments.</p>
+    <p class="sub reveal">Commissioned by journalists, publishers, authors, researchers, and communications teams — with work that has appeared in national press and peer-reviewed publications.</p>
+    <ul class="proof reveal">
+      <li class="lbl">Featured in</li>
+      <li>Visual Capitalist</li>
+      <li>World Economic Forum</li>
+      <li>Maps.com</li>
+    </ul>
 
     <div class="engagements reveal">
       <div class="eng"><div class="kick">For publishing</div><h3>Editorial</h3><p>Maps for books, magazines, and digital publications, built to sit in print or carry a story online and delivered at publication resolution.</p></div>
@@ -228,9 +240,13 @@ footer.site a:hover{color:var(--accent)}
       <div class="eng"><div class="kick">For institutions</div><h3>Research</h3><p>Figures for papers, government reports, and NGO communications that hold up under scrutiny and still stop a reader.</p></div>
     </div>
 
+    <p class="retainer reveal">A few organisations that publish maps regularly work with me on an ongoing basis rather than commission by commission. If your team puts out data-driven work on a steady cadence, mention it when you write.</p>
+
+    <p class="prompt reveal">Tell me three things and I'll come back with a quote: the dataset (or a link to where it lives), the format you need — print, web, or social, and roughly what size — and your deadline.</p>
+
     <div class="close reveal">
       <div class="price">From $250<span>Most commissions delivered within one to two weeks.</span></div>
-      <a href="mailto:adam@pythonmaps.com" class="btn">adam@pythonmaps.com →</a>
+      <a href="mailto:adam@pythonmaps.com?subject=Map%20commission%20enquiry&body=Hi%20Adam%2C%0D%0A%0D%0AThe%20dataset%20(or%20a%20link%20to%20it)%3A%20%0D%0AThe%20format%20I%20need%20(print%20%2F%20web%20%2F%20social%2C%20and%20size)%3A%20%0D%0AMy%20deadline%3A%20%0D%0AAnything%20else%20I%20should%20know%3A%20%0D%0A" class="btn">Start a commission →</a>
     </div>
   </div>
 </section>
