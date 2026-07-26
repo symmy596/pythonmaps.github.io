@@ -1,199 +1,291 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>PythonMaps</title>
-		<link rel = "icon" href = 
-		"resources/images/fulls/logo.png" 
-				type = "image/x-icon">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body>
-	</script>
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Header -->
-					<div class="topnav" id="myTopnav">
-						<a href="index.html"><strong>PythonMaps</strong></a>
-						<a href="#about" class="active">About</a>
-						<a href="#author">Author</a>
-						<a href="#Services">Services</a>
-						<a href="#Blog">Blog</a>
-						<a href="#Media">Media</a>		
-						<a href="gallery.html">Gallery</a>
-						<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-						</a>
-					  </div>
-				<!-- Main -->
-				
-				<div class="slideshow-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PythonMaps — Custom Map Visualisation by Dr. Adam Symington</title>
+<meta name="description" content="I create bespoke map visualisations for publishers, researchers, brands, and institutions. More than eighty maps since 2020, featured in Visual Capitalist, the World Economic Forum, and Maps.com." />
+<link rel="icon" href="resources/images/fulls/logo.png" type="image/x-icon" />
 
-					<div class="mySlides fade">
-					<img src="resources/images/fulls/shipping_lanes.png" loading="lazy" style="width:100%">
-					<!--<div class="text">
-						<a href="sl.html">Shipping Lanes - Read More</a>
-						</div> -->
-					</div>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-					<div class="mySlides fade">
-						<img src="resources/images/fulls/airways.png" loading="lazy" style="width:100%">
-					</div>
+<style>
+/* PythonMaps — studio site of Dr. Adam Symington. One goal: commission enquiries.
+   Warm-charcoal ground with bone text and a single cool teal accent, so the dark
+   maps read like framed prints. Display face is Gabriola (a system font on
+   Windows/Office) with a calligraphic serif fallback for everyone else; body is
+   IBM Plex Sans. No neatline frame, no catalogue gimmickry — the maps carry it. */
+:root{
+  --ink:#1b1a18;       /* warm charcoal ground */
+  --panel:#232120;     /* raised bands */
+  --text:#ece7dd;      /* bone */
+  --muted:#97918a;     /* warm grey */
+  --accent:#57a99c;    /* teal, tuned to sit on warm charcoal */
+  --accent-h:#6dc0b2;
+  --line:rgba(236,231,221,.14);
+  --wrap:1180px;
+  --pad:clamp(24px,5vw,56px);
+  --disp:"Gabriola","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.72;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--disp);font-weight:400;letter-spacing:.01em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 
-					<div class="mySlides fade">
-						<img src="resources/images/fulls/airways_airports.png" loading="lazy" style="width:100%">
-					</div>
+.btn{display:inline-block;border:1px solid var(--accent);color:var(--accent);background:transparent;
+  padding:14px 30px;font-family:"IBM Plex Sans",sans-serif;font-size:13px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .3s,color .3s}
+.btn:hover{background:var(--accent);color:var(--ink)}
+.btn--solid{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.btn--solid:hover{background:var(--accent-h);border-color:var(--accent-h)}
+.tlink{color:var(--accent);position:relative}
+.tlink::after{content:"";position:absolute;left:0;bottom:-3px;width:100%;height:1px;background:var(--accent);
+  transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.tlink:hover::after{transform:scaleX(1)}
 
-					<div class="mySlides fade">
-						<img src="resources/images/fulls/world.png" loading="lazy" style="width:100%">
-					</div>
-					
-					<div class="mySlides fade">
-					<img src="resources/images/fulls/co2.png" loading="lazy" style="width:100%">
-					</div>
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;height:66px;z-index:100;display:flex;align-items:center;
+  justify-content:space-between;padding:0 clamp(20px,5vw,52px);background:var(--ink);
+  border-bottom:1px solid transparent;transition:border-color .4s}
+nav.scrolled{background:var(--ink);border-bottom:1px solid var(--line)}
+.brand{font-family:var(--disp);font-size:26px;line-height:1;color:var(--text)}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--text);opacity:.82;
+  transition:color .3s,opacity .3s}
+.nav-links a:hover{color:var(--accent);opacity:1}
+.burger{display:none;background:none;border:none;color:var(--text);font-size:20px;cursor:pointer}
+.overlay{position:fixed;inset:0;background:rgba(27,26,24,.98);z-index:200;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:30px;opacity:0;pointer-events:none;transition:opacity .35s}
+.overlay.open{opacity:1;pointer-events:auto}
+.overlay a{font-family:var(--disp);font-size:36px;color:var(--text)}
+.overlay a:hover{color:var(--accent)}
+.overlay .x{position:absolute;top:22px;right:24px;background:none;border:none;color:var(--text);
+  font-size:26px;cursor:pointer}
 
-					<div class="mySlides fade">
-					<img src="resources/images/fulls/ch4.png" loading="lazy" style="width:100%">
-					</div>
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-scrim{position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(20,19,17,.9),rgba(20,19,17,.5) 45%,rgba(20,19,17,.15) 100%),
+             linear-gradient(0deg,rgba(20,19,17,.9),rgba(20,19,17,0) 48%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(72px,12vh,120px);padding-top:120px}
+.hero .eyebrow{color:var(--text);opacity:.72}
+.hero h1{font-size:clamp(46px,8.5vw,104px);line-height:1;color:var(--text);margin:16px 0 0;max-width:16ch}
+.hero p{font-size:clamp(17px,2vw,20px);color:var(--text);opacity:.82;max-width:58ch;margin-top:22px;line-height:1.55}
+.hero .cta-row{margin-top:38px;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.hero .scroll-cue{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--text);opacity:.7}
 
-					<div class="mySlides fade">
-					<img src="resources/images/fulls/airports_dark.png" loading="lazy" style="width:100%">
-					</div>
-					
-					<div class="mySlides fade">
-					<img src="resources/images/fulls/eez_dark.png" loading="lazy" style="width:100%">
-					</div>
+/* sections */
+section{position:relative;padding:clamp(90px,13vh,150px) 0}
+.band{background:var(--panel)}
+.sec-head{display:flex;flex-direction:column;gap:16px;margin-bottom:54px;max-width:60ch}
+.sec-head h2{font-size:clamp(34px,5vw,60px);line-height:1.04;color:var(--text)}
+.sec-head .note{color:var(--muted);font-size:clamp(17px,2vw,19px)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
 
-					<div class="mySlides fade">
-					<img src="resources/images/fulls/undersea_cables_dark.png" loading="lazy" style="width:100%">
-					</div>										
+/* selected work */
+.plates{display:flex;flex-direction:column;gap:52px}
+.prow{display:grid;grid-template-columns:1fr 1fr;gap:38px}
+figure.plate{margin:0}
+.plate .frameimg{position:relative;overflow:hidden;background:#000}
+.plate .frameimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.plate.wide .frameimg{aspect-ratio:21/9}
+.prow .plate .frameimg{aspect-ratio:16/10}
+.plate:hover .frameimg img{transform:scale(1.03)}
+.plate .hover{position:absolute;inset:0;display:flex;align-items:flex-end;padding:24px;
+  background:linear-gradient(0deg,rgba(20,19,17,.72),rgba(20,19,17,0) 55%);opacity:0;transition:opacity .4s}
+.plate:hover .hover{opacity:1}
+.plate .hover .ht{font-family:var(--disp);font-size:clamp(26px,2.8vw,34px);color:var(--text)}
+.plate figcaption{display:flex;align-items:baseline;gap:14px;margin-top:14px;
+  border-top:1px solid var(--line);padding-top:13px}
+.plate .cap-title{font-family:var(--disp);font-size:clamp(24px,2.4vw,30px);color:var(--text);line-height:1.1}
+.plate .cap-meta{margin-left:auto;font-size:13px;color:var(--muted);text-align:right}
+.work-foot{margin-top:54px;text-align:center}
+.work-foot a{font-size:15px}
 
-					<div class="mySlides fade">
-					<img src="resources/images/fulls/power_lines.png" loading="lazy" style="width:100%">
-					</div>	
-					
-					</div>
-					<a class="prev" onclick="plusSlides(-1)">❮</a>
-					<a class="next" onclick="plusSlides(1)">❯</a>
-					<br>
+/* commission */
+.commission .lead{font-size:clamp(18px,2.1vw,21px);color:var(--text);max-width:62ch;line-height:1.6}
+.commission .sub{color:var(--muted);max-width:64ch;margin-top:18px}
+.engagements{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);margin:54px 0}
+.eng{padding:34px 30px;border-left:1px solid var(--line)}
+.eng:first-child{border-left:none}
+.eng .kick{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.eng h3{font-family:var(--disp);font-size:30px;margin:12px 0 12px;color:var(--text);line-height:1.05}
+.eng p{font-size:15px;color:var(--muted);line-height:1.66}
+.commission .close{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.commission .price{font-size:clamp(22px,2.6vw,28px);font-family:var(--disp);color:var(--text)}
+.commission .price span{color:var(--muted);font-family:"IBM Plex Sans",sans-serif;font-size:15px;display:block;margin-top:4px}
 
-					<div style="text-align:center">
-					<span class="dot" onclick="currentSlide(1)"></span> 
-					<span class="dot" onclick="currentSlide(2)"></span> 
-					<span class="dot" onclick="currentSlide(3)"></span> 
-					</div>
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:clamp(36px,6vw,80px);align-items:start}
+.about-photo img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.about .sec-head{margin-bottom:26px}
+.about p{color:var(--muted);margin-top:22px;max-width:60ch}
+.about p:first-of-type{margin-top:0}
+.socials{display:flex;gap:24px;margin-top:36px}
+.socials a{font-size:20px;color:var(--muted);transition:color .3s}
+.socials a:hover{color:var(--accent)}
 
-				<!-- Footer -->
-					<footer id="about" class="panel">
-							<div>
-								<section>
-									<h2>If something is worth doing, it's worth doing in Python.</h2>
-									<p>The PythonMaps project aims to generate informative visualisations showing the world in new and interesting lights, in an artistic fashion. We also aim to show off the incredible utility of the Python programming language as well as the beautiful visualisations that are possible. </p>
-								</section>
-								<section>
-									<h2>Follow me on ...</h2>
-									<ul class="icons">
-										<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-									</ul>
-								</section>
-							</div>
-					</footer>
-					<footer id="author" class="panel">
-						<div>
-							<section>
-								<h2>Dr. Adam Symington</h2>
-								<p>Dr. Adam Symington is a geospatial data scientist, leading the data science team at Geollect Ltd in the United Kingdom. Over the last two years he has developed exceptional geospatial data science skills and worked on projects with a variety of data sources across multiple sectors. Prior to his career in data science Adam was a theoretical physicist at the University of Bath in England where he used machine learning and other statistical techniques to predict the properties of materials. Adam has published 17 peer reviewed research papers, including 3 open source software papers, writes about geospatial data science on towards data science and runs the PythonMaps project, a project designed to spread the love of geospatial data through eye-catching visualisation. </p>
-							</section>
-							<section>
-								<h2>Follow me on ...</h2>
-								<ul class="icons">
-									<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-								</ul>
-							</section>
-						</div>
-				</footer>
-				<footer id="Services" class="panel">
-					<div>
-						<section>
-							<h2>Services</h2>
-							<p>Geospatial data often sits, gathering dust in a database where only a few people can make use of it. Converting this data into interesting maps and visualisations is the best way to get it in front of decision makers and tell a story. I operate on a freelance basis and create bespoke visualisations and maps on request. I have worked with many organisations, including marketing companies, journalists, publishers, authors and government departments. I have an incredibly wide range of software development, data visualisation and GIS skills that I can use to solve geospatial data science problems, with a particular focus on data visualisation and cartography. </p>
-							<p>Contact me via symmy586@gmail.com for more details.</p>
-						</section>
-						<section>
-							<h2>Follow me on ...</h2>
-							<ul class="icons">
-								<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-							</ul>
-						</section>
-					</div>
-			</footer>
- 			<footer id="Blog" class="panel">
-				<div>
-					<section>
-						<h2>Recent Posts</h2>
-						<p><a href="assets/html/2_geospatial_data.slides.html">Geospatial Data</a></p>
-						<p><a href="assets/html/3_Points_and_Lines.slides.html">Plotting Points and Lines</a></p>
-						<p><a href="assets/html/4_Polygons.slides.html">Plotting Polygons</a></p>
-						<p><a href="assets/html/5_Rasters.slides.html">Plotting Rasters</a></p>
-						<p><a href="assets/html/6_Rasters_and_Shapes.slides.html">Plotting Rasters and Shapes</a></p>
-					</section>
-					<section>
-						<h2>Follow me on ...</h2>
-						<ul class="icons">
-							<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-						</ul>
-					</section>
-				</div>
-		</footer>
-		<footer id="Media" class="panel">
-			<div>
-				<section>
-					<h2>Recent Posts</h2>
-					<p><a href="https://www.linkedin.com/video/live/urn:li:ugcPost:6935228212402634752/">Scipy Workshop</a></p>
-					<p><a href="https://mapscaping.com/podcast/python-maps/">Mapscaping podcast</a></p>
-					<p><a href="https://www.visualcapitalist.com/cp/mapping-shipping-lanes-maritime-traffic-around-the-world/">Shipping Lanes in the Visual Capitalist</a></p>
-					<p><a href="https://cdn.transistor.fm/file/transistor/m/shows/6164/f342ea3a634e4b1b04268be4a96c9d3e.mp3">You want to do what? Podcast</a></p>
-					<p><a href="https://www.linkedin.com/video/live/urn:li:ugcPost:6935228212402634752/">Harnham Webinar</a></p>
-				</section>
-				<section>
-					<h2>Follow me on ...</h2>
-					<ul class="icons">
-						<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-					</ul>
-				</section>
-			</div>
-	</footer>
-			</div>
+/* book */
+.book .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(32px,6vw,72px);align-items:center;max-width:900px}
+.book-cover img{width:clamp(170px,24vw,240px);height:auto;display:block}
+.book-text{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.book h2{font-size:clamp(34px,5vw,56px);color:var(--text)}
+.book p{color:var(--muted);max-width:44ch}
+.book .btn{margin-top:14px}
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/slider.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/myfunction.js"></script>
-	</body>
+/* footer */
+footer.site{background:var(--ink);border-top:1px solid var(--line);padding:26px 0}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted)}
+footer.site a:hover{color:var(--accent)}
+
+@media(max-width:860px){.engagements{grid-template-columns:1fr}
+  .eng{border-left:none;border-top:1px solid var(--line)}.eng:first-child{border-top:none}
+  .about-grid{grid-template-columns:1fr;gap:36px}.about-photo{max-width:280px}
+  .book .wrap{grid-template-columns:1fr;justify-items:center;text-align:center}.book-text{align-items:center}}
+@media(max-width:720px){.nav-links{display:none}.burger{display:block}
+  .prow{grid-template-columns:1fr;gap:40px}.plate.wide .frameimg{aspect-ratio:16/10}.plate .cap-meta{display:none}}
+@media(max-width:520px){nav{padding:0 16px}.hero p{font-size:17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body id="top">
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#top" class="brand">PythonMaps</a>
+  <div class="nav-links">
+    <a href="gallery.html">Gallery</a>
+    <a href="#commission">Commission</a>
+    <a href="#about">About</a>
+    <a href="#book">Book</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+</nav>
+
+<div class="overlay" id="overlay">
+  <button class="x" id="closeMenu" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  <a href="gallery.html">Gallery</a>
+  <a href="#commission">Commission</a>
+  <a href="#about">About</a>
+  <a href="#book">Book</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <img class="hero-img" src="resources/images/fulls/shipping_lanes.png" alt="The world's shipping lanes traced in light on a dark ocean" loading="eager" />
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <h1>Beautiful maps, built with Python.</h1>
+    <p>I create bespoke map visualisations for publishers, researchers, brands, and institutions. My work has been featured in Visual Capitalist, the World Economic Forum, and Maps.com.</p>
+    <div class="cta-row">
+      <a href="#commission" class="btn btn--solid">Commission a map →</a>
+      <a href="gallery.html" class="scroll-cue">View the gallery →</a>
+    </div>
+  </div>
+</header>
+
+<!-- BOOK -->
+<section id="book" class="band book">
+  <div class="wrap reveal">
+    <div class="book-cover">
+      <a href="https://locatepress.com/book/pymaps" target="_blank" rel="noopener">
+        <img src="resources/images/site/book-cover.png" alt="Python Maps — Geospatial Visualisation with Python, book cover" loading="lazy" />
+      </a>
+    </div>
+    <div class="book-text">
+      <span class="eyebrow">The book</span>
+      <h2>Python Maps</h2>
+      <p>Every technique behind these maps, written down. <em>Geospatial Visualisation with Python</em>, published by Locate Press in 2025.</p>
+      <a href="https://locatepress.com/book/pymaps" target="_blank" rel="noopener" class="btn">Locate Press →</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMMISSION -->
+<section id="commission" class="commission">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Commission</span><h2>Commission a map</h2></div>
+    <p class="lead reveal">Every map starts with a question: what does this data actually look like, and who needs to see it? I build each one from the raw sources, with a projection and palette chosen for the job, and deliver it at the resolution it will be printed or published. The result is a single image that carries a dataset a lot further than a chart can.</p>
+    <p class="sub reveal">Past commissions have appeared in national press and academic work, for marketing agencies, journalists, publishers, authors, and government departments.</p>
+
+    <div class="engagements reveal">
+      <div class="eng"><div class="kick">For publishing</div><h3>Editorial</h3><p>Maps for books, magazines, and digital publications, built to sit in print or carry a story online and delivered at publication resolution.</p></div>
+      <div class="eng"><div class="kick">For companies</div><h3>Brand</h3><p>Thematic maps for reports, campaigns, and launches, made with the same care as the work above.</p></div>
+      <div class="eng"><div class="kick">For institutions</div><h3>Research</h3><p>Figures for papers, government reports, and NGO communications that hold up under scrutiny and still stop a reader.</p></div>
+    </div>
+
+    <div class="close reveal">
+      <div class="price">From $250<span>Most commissions delivered within one to two weeks.</span></div>
+      <a href="mailto:adam@pythonmaps.com" class="btn">adam@pythonmaps.com →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="band about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="resources/images/site/adam-symington.jpeg" alt="Dr. Adam Symington" loading="lazy" />
+    </div>
+    <div class="about-body reveal">
+      <div class="sec-head"><span class="eyebrow">About</span><h2>Dr. Adam Symington</h2></div>
+      <p>I trained as a computational chemist, earning a PhD from the University of Bath where I used machine learning to predict how materials behave. Somewhere along the way I started mapping data for the pleasure of the problem, and in 2020 that turned into PythonMaps.</p>
+      <p>Since then I have spent eight years working as a data scientist in industry and made more than eighty maps. I have written seventeen peer-reviewed papers, three of them on open-source software, along with a book on the subject. My maps have been featured by Visual Capitalist, the World Economic Forum, and Maps.com, and are followed by over a hundred thousand people on X and Instagram.</p>
+      <p>If you have data worth looking at properly, get in touch.</p>
+      <div class="socials">
+        <a href="https://twitter.com/PythonMaps" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/pythonmaps/?hl=en" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/symmy596" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/adam-symington/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://medium.com/@pythonmaps" target="_blank" rel="noopener" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <span>© 2025 Dr. Adam Symington · PythonMaps</span>
+    <a href="mailto:adam@pythonmaps.com">adam@pythonmaps.com</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var nav = document.getElementById("nav");
+  function onScroll(){ nav.classList.toggle("scrolled", window.scrollY > 60); }
+  onScroll(); window.addEventListener("scroll", onScroll, {passive:true});
+
+  var overlay = document.getElementById("overlay");
+  document.getElementById("burger").addEventListener("click", function(){ overlay.classList.add("open"); });
+  document.getElementById("closeMenu").addEventListener("click", function(){ overlay.classList.remove("open"); });
+  overlay.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ overlay.classList.remove("open"); }); });
+
+  var items = document.querySelectorAll(".reveal");
+  if (reduced || !("IntersectionObserver" in window)){ items.forEach(function(el){ el.classList.add("in"); }); }
+  else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, {threshold:.14, rootMargin:"0px 0px -8% 0px"});
+    items.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
 </html>

@@ -1,327 +1,505 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>PythonMaps</title>
-		<link rel = "icon" href = 
-		"resources/images/fulls/logo.png" 
-				type = "image/x-icon">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body>
-	</script>
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Header -->
-					<div class="topnav" id="myTopnav">
-						<a href="index.html"><strong>PythonMaps</strong></a>
-						<a href="#about" class="active">About</a>
-						<a href="#author">Author</a>
-						<a href="#Services">Services</a>
-						<a href="#Blog">Blog</a>
-						<a href="#Media">Media</a>
-                        <a href="gallery.html">Gallery</a>
-						<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-						</a>
-					  </div>
-				<!-- Main -->
-				<div class="row">
-                    <div class="column">
-					  <img class="myImg" src="resources/images/thumbs/africa_low_res.png" alt="African Population Density">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/africa_high_res.png" id="img01">
-						  <div id="caption"></div>
-						</div> 
-					<img class="myImg" src="resources/images/thumbs/airways_airports_low_res.png" alt="The World's Airports and Airways">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/airways_airports_high_res.png" id="img04">
-						  <div id="caption"></div>
-						</div> 
-					  <img class="myImg" src="resources/images/thumbs/airports_dark_low_res.png" alt="The World's Airports">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/airports_dark_high_res.png" id="img02">
-						  <div id="caption"></div>
-						</div> 
-					<img class="myImg" src="resources/images/thumbs/namerica_low_res.png" alt="North American Rivers">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/namerica_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					<img class="myImg" src="resources/images/thumbs/raj_low_res.png" alt="The Population density of the British Raj">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/raj_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/bangladesh_low_res.png" alt="The Population density of Bangladesh">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/bangladesh_high_res.png" id="img05">
-						  <div id="caption"></div>
-						</div> 
-					  <img class="myImg" src="resources/images/thumbs/brazil_low_res.png" alt="The Population density of Brazil">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/brazil_high_res.png" id="img06">
-						  <div id="caption"></div>
-						</div>                       
-                    </div>
-                    <div class="column">
-					<img class="myImg" src="resources/images/thumbs/shipping_lanes_low_res.png" alt="The World's Shipping Lanes">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/shipping_lanes_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/CO_low_res.png" alt="The World's Carbon Monoxide Emissions">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/CO_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/co2_low_res.png" alt="The World's Carbon Dioxide Emissions">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/co2_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/eez_low_res.png" alt="The World's Exclusive Economic Zones">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/eez_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/egypt_low_res.png" alt="The Population density of Egypt">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/egypt_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/europe_low_res.png" alt="The Population density of Europe">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/europehigh_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/world_low_res.png" alt="The World's Population Density">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/world_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>   
-					  <img class="myImg" src="resources/images/thumbs/ch4_low_res.png" alt="The World's Methane Emissions">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/ch4_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>     
-                    </div>
-                    <div class="column">
-					  <img class="myImg" src="resources/images/thumbs/india_low_res.png" alt="The Population density of India">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/india_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					<img class="myImg" src="resources/images/thumbs/africa_rivers_low_res.png" alt="African Rivers">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/africa_rivers_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/middle_east_low_res.png" alt="The Population density of the Middle East">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/middle_east_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/north_america_low_res.png" alt="The Population density of North America">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/north_america_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/pipelines_low_res.png" alt="The World's Pipelines">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/pipelines_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/undersea_cables_low_res.png" alt="The World's Undersea Cables">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/undersea_cables_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/usa_low_res.png" alt="The Population density of the USA">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/usa_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-					  <img class="myImg" src="resources/images/thumbs/World_railways_low_res.png" alt="The World's Railways">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/World_railways_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-                    </div>
-					<div class="column">
-					<img class="myImg" src="resources/images/thumbs/samerica_low_res.png" alt="South American Rivers">
-						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
-						  <img class="modal-content" src="resources/images/fulls/samerica_high_res.png" id="img07">
-						  <div id="caption"></div>
-						</div>  
-						<img class="myImg" src="resources/images/thumbs/Ports_low_res.png" alt="The World's Ports">
-						  <div id="myModal" class="modal">
-							<span class="close">&times;</span>
-							<img class="modal-content" src="resources/images/fulls/Ports_high_res.png" id="img07">
-							<div id="caption"></div>
-						  </div>  
-						<img class="myImg" src="resources/images/thumbs/airways_low_res.png" alt="The World's Airways">
-						  <div id="myModal" class="modal">
-							<span class="close">&times;</span>
-							<img class="modal-content" src="resources/images/fulls/airways_airports_high_res.png" id="img03">
-							<div id="caption"></div>
-						  </div> 
-						<img class="myImg" src="resources/images/thumbs/se_asia_low_res.png" alt="The Population density of South East Asia">
-						  <div id="myModal" class="modal">
-							<span class="close">&times;</span>
-							<img class="modal-content" src="resources/images/fulls/se_asia_high_res.png" id="img07">
-							<div id="caption"></div>
-						  </div>  
-						<img class="myImg" src="resources/images/thumbs/china_low_res.png" alt="The Population density of China">
-						  <div id="myModal" class="modal">
-							<span class="close">&times;</span>
-							<img class="modal-content" src="resources/images/fulls/china_high_res.png" id="img07">
-							<div id="caption"></div>
-						  </div>  
-						<img class="myImg" src="resources/images/thumbs/south_america_low_res.png" alt="The Population density of South America">
-						  <div id="myModal" class="modal">
-							<span class="close">&times;</span>
-							<img class="modal-content" src="resources/images/fulls/south_america_high_res.png" id="img07">
-							<div id="caption"></div>
-						  </div>  
-					  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery · PythonMaps</title>
+<meta name="description" content="Maps by Dr. Adam Symington, grouped by theme. Click a map to see the full set." />
+<link rel="icon" href="resources/images/fulls/logo.png" type="image/x-icon" />
 
-				<!-- Footer -->
-					<footer id="about" class="panel">
-							<div>
-								<section>
-									<h2>If something is worth doing, it's worth doing in Python.</h2>
-									<p>The PythonMaps project aims to generate informative visualisations showing the world in new and interesting lights, in an artistic fashion. We also aim to show off the incredible utility of the Python programming language as well as the beautiful visualisations that are possible. </p>
-								</section>
-								<section>
-									<h2>Follow me on ...</h2>
-									<ul class="icons">
-										<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-									</ul>
-								</section>
-							</div>
-					</footer>
-					<footer id="author" class="panel">
-						<div>
-							<section>
-								<h2>Dr. Adam Symington</h2>
-								<p>Dr. Adam Symington is a geospatial data scientist, leading the data science team at Geollect Ltd in the United Kingdom. Over the last two years he has developed exceptional geospatial data science skills and worked on projects with a variety of data sources across multiple sectors. Prior to his career in data science Adam was a theoretical physicist at the University of Bath in England where he used machine learning and other statistical techniques to predict the properties of materials. Adam has published 17 peer reviewed research papers, including 3 open source software papers, writes about geospatial data science on towards data science and runs the PythonMaps project, a project designed to spread the love of geospatial data through eye-catching visualisation. </p>
-							</section>
-							<section>
-								<h2>Follow me on ...</h2>
-								<ul class="icons">
-									<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-								</ul>
-							</section>
-						</div>
-				</footer>
-				<footer id="Services" class="panel">
-					<div>
-						<section>
-							<h2>Services</h2>
-							<p>Geospatial data often sits, gathering dust in a database where only a few people can make use of it. Converting this data into interesting maps and visualisations is the best way to get it in front of decision makers and tell a story. I operate on a freelance basis and create bespoke visualisations and maps on request. I have worked with many organisations, including marketing companies, journalists, publishers, authors and government departments. I have an incredibly wide range of software development, data visualisation and GIS skills that I can use to solve geospatial data science problems, with a particular focus on data visualisation and cartography. </p>
-							<p>Contact me via symmy586@gmail.com for more details.</p>
-						</section>
-						<section>
-							<h2>Follow me on ...</h2>
-							<ul class="icons">
-								<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-							</ul>
-						</section>
-					</div>
-			</footer>
- 			<footer id="Blog" class="panel">
-				<div>
-					<section>
-						<h2>Recent Posts</h2>
-						<p><a href="assets/html/2_geospatial_data.slides.html">Geospatial Data</a></p>
-						<p><a href="assets/html/3_Points_and_Lines.slides.html">Plotting Points and Lines</a></p>
-						<p><a href="assets/html/4_Polygons.slides.html">Plotting Polygons</a></p>
-						<p><a href="assets/html/5_Rasters.slides.html">Plotting Rasters</a></p>
-						<p><a href="assets/html/6_Rasters_and_Shapes.slides.html">Plotting Rasters and Shapes</a></p>
-					</section>
-					<section>
-						<h2>Follow me on ...</h2>
-						<ul class="icons">
-							<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-						</ul>
-					</section>
-				</div>
-		</footer>
-		<footer id="Media" class="panel">
-			<div>
-				<section>
-					<h2>Recent Posts</h2>
-					<p><a href="https://www.linkedin.com/video/live/urn:li:ugcPost:6935228212402634752/">Scipy Workshop</a></p>
-					<p><a href="https://mapscaping.com/podcast/python-maps/">Mapscaping podcast</a></p>
-					<p><a href="https://www.visualcapitalist.com/cp/mapping-shipping-lanes-maritime-traffic-around-the-world/">Shipping Lanes in the Visual Capitalist</a></p>
-					<p><a href="https://cdn.transistor.fm/file/transistor/m/shows/6164/f342ea3a634e4b1b04268be4a96c9d3e.mp3">You want to do what? Podcast</a></p>
-					<p><a href="https://www.linkedin.com/video/live/urn:li:ugcPost:6935228212402634752/">Harnham Webinar</a></p>
-				</section>
-				<section>
-					<h2>Follow me on ...</h2>
-					<ul class="icons">
-						<li><a href="https://twitter.com/PythonMaps" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://www.instagram.com/pythonmaps/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/symmy596" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="https://www.linkedin.com/in/adam-symington/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://medium.com/@pythonmaps" class="icon brands fab fa-medium"><span class="label">Medium</span></a></li>
-					</ul>
-				</section>
-			</div>
-	</footer>
-			</div>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/slider.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/myfunction.js"></script>
-			<script src="assets/js/popup.js"></script>
-	</body>
+<style>
+/* Gallery — same visual system as index.html: warm charcoal ground, bone text,
+   one teal accent, Gabriola display with serif fallback.
+
+   HOW THIS PAGE WORKS (read this before adding maps)
+   --------------------------------------------------
+   The gallery shows only the "global" (parent) map for each theme. Clicking a
+   parent opens a popup grid containing that parent PLUS every child map in its
+   theme. Clicking any map in the popup enlarges it in a full-screen lightbox.
+   Everything is generated from the MAPS manifest in the script at the bottom of
+   the page — the HTML grid itself is empty until JS fills it. See the big comment
+   above the MAPS array for exactly how to add a new map or a new theme. */
+:root{
+  --ink:#1b1a18; --panel:#232120; --text:#ece7dd; --muted:#97918a;
+  --accent:#57a99c; --accent-h:#6dc0b2; --line:rgba(236,231,221,.14);
+  --wrap:1180px; --pad:clamp(24px,5vw,56px);
+  --disp:"Gabriola","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:17px;line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--disp);font-weight:400;letter-spacing:.01em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-block;border:1px solid var(--accent);color:var(--accent);background:transparent;
+  padding:14px 30px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  cursor:pointer;transition:background .3s,color .3s}
+.btn:hover{background:var(--accent);color:var(--ink)}
+
+/* nav (always solid) */
+nav{position:fixed;top:0;left:0;right:0;height:66px;z-index:100;display:flex;align-items:center;
+  justify-content:space-between;padding:0 clamp(20px,5vw,52px);background:var(--ink);
+  border-bottom:1px solid var(--line)}
+.brand{font-family:var(--disp);font-size:26px;line-height:1;color:var(--text)}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--text);opacity:.82;transition:color .3s,opacity .3s}
+.nav-links a:hover{color:var(--accent);opacity:1}
+.burger{display:none;background:none;border:none;color:var(--text);font-size:20px;cursor:pointer}
+.overlay{position:fixed;inset:0;background:rgba(27,26,24,.98);z-index:200;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:30px;opacity:0;pointer-events:none;transition:opacity .35s}
+.overlay.open{opacity:1;pointer-events:auto}
+.overlay a{font-family:var(--disp);font-size:36px;color:var(--text)}
+.overlay a:hover{color:var(--accent)}
+.overlay .x{position:absolute;top:22px;right:24px;background:none;border:none;color:var(--text);font-size:26px;cursor:pointer}
+
+/* gallery grid of parent maps (stacked, natural width) */
+.series{padding:clamp(48px,8vh,86px) 0 clamp(72px,12vh,120px)}
+.series.lead{padding-top:calc(66px + clamp(36px,7vh,64px))}
+.gseries{display:flex;flex-direction:column;gap:clamp(46px,7vh,80px)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+
+figure{margin:0}
+.thumb{position:relative;overflow:hidden;background:#000;display:block;cursor:pointer}
+.thumb img{width:100%;height:auto;display:block;transition:transform .6s}
+figure:hover .thumb img{transform:scale(1.02)}
+.thumb .badge{position:absolute;left:0;right:0;bottom:0;padding:16px 16px 14px;font-size:12px;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text);pointer-events:none;opacity:0;transition:opacity .3s;
+  background:linear-gradient(0deg,rgba(20,19,17,.92),rgba(20,19,17,0))}
+figure:hover .thumb .badge{opacity:1}
+.figcap{display:flex;align-items:baseline;gap:14px;margin-top:12px;border-top:1px solid var(--line);padding-top:11px}
+.figcap .t{font-family:var(--disp);font-size:clamp(24px,2.2vw,30px);color:var(--text);line-height:1.1}
+.figcap .m{margin-left:auto;font-size:13px;color:var(--muted);text-align:right}
+
+/* commission CTA strip */
+.cta{background:var(--panel);text-align:center;padding:clamp(72px,12vh,120px) 0}
+.cta .wrap{display:flex;flex-direction:column;align-items:center;gap:16px;max-width:640px}
+.cta h2{font-size:clamp(34px,5vw,56px);color:var(--text)}
+.cta p{color:var(--muted);max-width:46ch}
+.cta .btn{margin-top:12px}
+
+/* footer */
+footer.site{background:var(--ink);border-top:1px solid var(--line);padding:26px 0}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+footer.site a:hover{color:var(--accent)}
+
+/* ---- popup: theme grid ---- */
+.modal{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
+  padding:clamp(14px,4vw,48px);background:rgba(12,11,10,.93);opacity:0;pointer-events:none;transition:opacity .3s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-inner{position:relative;background:var(--ink);border:1px solid var(--line);width:100%;max-width:1200px;
+  max-height:88vh;overflow:auto;padding:clamp(26px,4vw,54px)}
+.modal-close{position:absolute;top:10px;right:16px;background:none;border:none;color:var(--text);font-size:28px;
+  line-height:1;cursor:pointer;z-index:2}
+.modal-close:hover{color:var(--accent)}
+.modal-head{display:flex;align-items:baseline;gap:16px;margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.modal-head h3{font-family:var(--disp);font-size:clamp(28px,3.4vw,42px);color:var(--text);line-height:1}
+.modal-head .modal-cnt{margin-left:auto;font-size:13px;color:var(--muted);letter-spacing:.02em}
+.modal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.mitem{cursor:pointer}
+.mitem .mimg{aspect-ratio:4/3;overflow:hidden;background:#000;display:block}
+.mitem .mimg img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .5s}
+.mitem:hover .mimg img{transform:scale(1.04)}
+.mitem .mt{font-family:var(--disp);font-size:20px;color:var(--text);margin-top:8px;line-height:1.1}
+
+/* ---- lightbox: single enlarged map (sits above the popup) ---- */
+.light{position:fixed;inset:0;z-index:400;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;padding:clamp(16px,4vw,60px);background:rgba(8,8,7,.96);opacity:0;pointer-events:none;transition:opacity .3s}
+.light.open{opacity:1;pointer-events:auto}
+.light img{max-width:100%;max-height:82vh;object-fit:contain;display:block}
+.light .lt{font-family:var(--disp);font-size:clamp(22px,3vw,32px);color:var(--text);text-align:center}
+.light-close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--text);font-size:30px;
+  line-height:1;cursor:pointer}
+.light-close:hover{color:var(--accent)}
+
+@media(max-width:720px){.nav-links{display:none}.burger{display:block}.figcap .m{display:none}}
+@media(max-width:520px){nav{padding:0 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body id="top">
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="brand">PythonMaps</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#commission">Commission</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#book">Book</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+</nav>
+
+<div class="overlay" id="overlay">
+  <button class="x" id="closeMenu" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  <a href="index.html">Home</a>
+  <a href="index.html#commission">Commission</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#book">Book</a>
+</div>
+
+<!-- GALLERY (parent maps only; rendered from the MAPS manifest below) -->
+<section class="series lead">
+  <div class="wrap">
+    <div class="gseries" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- COMMISSION CTA -->
+<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow">Commission</span>
+    <h2>Want one of your own?</h2>
+    <p>I make bespoke maps like these from your data, built to be published, printed, or presented. From $250, usually within one to two weeks.</p>
+    <a href="mailto:adam@pythonmaps.com" class="btn">adam@pythonmaps.com →</a>
+  </div>
+</section>
+
+<!-- POPUP: theme grid (filled by JS) -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Related maps" aria-hidden="true">
+  <div class="modal-inner">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-head"><h3 id="modalTheme"></h3><span class="modal-cnt" id="modalCount"></span></div>
+    <div class="modal-grid" id="modalGrid"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX: single enlarged map (filled by JS) -->
+<div class="light" id="light" role="dialog" aria-modal="true" aria-label="Enlarged map" aria-hidden="true">
+  <button class="light-close" id="lightClose" aria-label="Close">&times;</button>
+  <img id="lightImg" src="" alt="" />
+  <div class="lt" id="lightTitle"></div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <span>© 2025 Dr. Adam Symington · PythonMaps</span>
+    <a href="mailto:adam@pythonmaps.com">adam@pythonmaps.com</a>
+  </div>
+</footer>
+
+<!-- nav + mobile menu -->
+<script>
+(function(){
+  var nav = document.getElementById("nav");
+  var overlay = document.getElementById("overlay");
+  document.getElementById("burger").addEventListener("click", function(){ overlay.classList.add("open"); });
+  document.getElementById("closeMenu").addEventListener("click", function(){ overlay.classList.remove("open"); });
+  overlay.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ overlay.classList.remove("open"); }); });
+})();
+</script>
+
+<!-- gallery + popup + lightbox -->
+<script>
+/* ============================================================================
+   THE MAP MANIFEST — the single place you edit to change the gallery.
+   ----------------------------------------------------------------------------
+   FILE LAYOUT ON DISK (under resources/images/fulls/):
+       world.png                <- a PARENT ("global") map, lives at the root
+       world/                   <- a folder named after that parent
+           china.png            <- CHILD maps of world.png live inside it
+           india.png
+           ...
+       co2.png                  <- another parent
+       co2/ch4.png, co2/CO.png  <- its children
+   Rule: every parent's `file` sits at the root; its `dir` is a folder of the
+   same name holding that theme's child maps.
+
+   HOW TO ADD A NEW MAP TO AN EXISTING THEME
+       1. Drop the image file into that theme's folder, e.g.
+          resources/images/fulls/world/spain.png
+       2. Add one line to that group's `children` array below:
+          { file: "spain.png", title: "Spain" }
+       Done. It appears in the theme's popup automatically.
+
+   HOW TO ADD A WHOLE NEW THEME
+       1. Put the parent (global) image at the root:
+          resources/images/fulls/rivers.png
+       2. Make its folder and put the child maps inside:
+          resources/images/fulls/rivers/amazon.png  (etc.)
+       3. Add a new group object to MAPS below:
+          {
+            theme: "Rivers",                              // label shown on the site
+            dir: "rivers",                                // must match the folder name
+            parent: { file: "rivers.png", title: "The World's Rivers" },
+            children: [ { file: "amazon.png", title: "The Amazon" } ]
+          }
+
+   NOTES
+     - The gallery shows ONLY each group's `parent`. The children are hidden and
+       appear only inside that parent's popup (the popup also includes the parent).
+     - Order of groups here = order of maps on the page.
+     - Titles may contain characters like & or ₂; they are escaped/handled for you.
+   ========================================================================== */
+var BASE = "resources/images/fulls/";
+
+var MAPS = [
+  {
+    theme: "Water Risk",
+    dir: "water_risk",
+    parent: { file: "water_risk.jpg", title: "Global Water Risk" },
+    children: [
+      { file: "samerica.jpg",         title: "South America" },
+      { file: "namerica.jpg",         title: "North America" },
+      { file: "asia.jpg",             title: "Asia" },
+      { file: "europe.jpg",           title: "Europe" },
+      { file: "africa.jpg",           title: "Africa" },
+      { file: "oceania.jpg",          title: "Oceania" }
+    ]
+  },
+  {
+    theme: "Population density",
+    dir: "population",
+    parent: { file: "world.png", title: "World Population Density" },
+    children: [
+      { file: "china.png",         title: "China" },
+      { file: "india.png",         title: "India" },
+      { file: "usa.png",           title: "United States" },
+      { file: "europe.png",        title: "Europe" },
+      { file: "africa.png",        title: "Africa" },
+      { file: "japan.png",         title: "Japan" },
+      { file: "brazil.png",        title: "Brazil" },
+      { file: "egypt.png",         title: "Egypt" },
+      { file: "se_asia.png",       title: "Southeast Asia" },
+      { file: "north_america.png", title: "North America" },
+      { file: "south_america.png", title: "South America" },
+      { file: "middle_east.png",   title: "Middle East" },
+      { file: "bangladesh.png",    title: "Bangladesh" },
+      { file: "pakistan.png",      title: "Pakistan" },
+      { file: "raj.png",           title: "The British Raj" }
+    ]
+  },
+  {
+    theme: "Emissions",
+    dir: "co2",
+    parent: { file: "co2.png", title: "Global CO₂ Emissions" },
+    children: [
+      { file: "ch4.png", title: "Global Methane Emissions" },
+      { file: "CO.png",  title: "Global Carbon Monoxide Emissions" }
+    ]
+  },
+  {
+    theme: "Aviation",
+    dir: "airways_airports",
+    parent: { file: "airways_airports.png", title: "Airports & Airways" },
+    children: [
+      { file: "airways.png",       title: "The World's Airways" },
+      { file: "airports_dark.png", title: "The World's Airports" }
+    ]
+  },
+  {
+    theme: "Maritime & sea",
+    dir: "shipping_lanes",
+    parent: { file: "shipping_lanes.png", title: "The World's Shipping Lanes" },
+    children: [
+      { file: "Ports.png",              title: "The World's Ports" },
+      { file: "eez_dark.png",           title: "Exclusive Economic Zones" },
+      { file: "distance_from_port.png", title: "Distance from Port" }
+    ]
+  },
+  {
+    theme: "Infrastructure & networks",
+    dir: "power_lines",
+    parent: { file: "power_lines.png", title: "Global Power Infrastructure" },
+    children: [
+      { file: "undersea_cables_dark.png", title: "The World's Undersea Cables" },
+      { file: "pipelines.png",            title: "The World's Pipelines" },
+      { file: "World_railways.png",       title: "The World's Railways" },
+      { file: "power_plants.png",         title: "The World's Power Plants" }
+    ]
+  },
+  {
+    theme: "Forests",
+    dir: "forests",
+    parent: { file: "world_forests.jpg", title: "Global Forest Cover" },
+    children: [
+      { file: "africa.png",    title: "Africa" },
+      { file: "europe.jpeg",   title: "Europe" },
+      { file: "namerica.jpeg", title: "North America" },
+      { file: "samerica.jpeg", title: "South America" }
+    ]
+  },
+  {
+    theme: "Rivers",
+    dir: "rivers",
+    parent: { file: "rivers.png", title: "The World's Rivers" },
+    children: [
+      { file: "africa.jpeg",        title: "Africa" },
+      { file: "asia.jpeg",          title: "Asia" },
+      { file: "europe.jpeg",        title: "Europe" },
+      { file: "north_america.jpeg", title: "North America" },
+      { file: "south_america.jpeg", title: "South America" },
+      { file: "temperature_africa.png",         title: "Minimum River Temperature: Africa" },
+      { file: "temperature_asia.png",           title: "Minimum River Temperature: Asia" },
+      { file: "temperature_europe.png",         title: "Minimum River Temperature: Europe" },
+      { file: "temperature_north_america.png",  title: "Minimum River Temperature: North America" },
+      { file: "temperature_oceania.png",        title: "Minimum River Temperature: Oceania" },
+      { file: "temperature_south_america.jpeg", title: "Minimum River Temperature: South America" }
+    ]
+  },
+  {
+    theme: "Roads",
+    dir: "roads",
+    parent: { file: "roads.png", title: "The World's Roads" },
+    children: [
+      { file: "europe_vc1.png", title: "Europe" }
+    ]
+  },
+  {
+    theme: "Agriculture & land",
+    dir: "agriculture",
+    parent: { file: "agriculture.png", title: "Global Livestock Density" },
+    children: []
+  },
+  {
+    theme: "Natural hazards",
+    dir: "natural_hazards",
+    parent: { file: "natural_hazards.png", title: "Global Earthquakes, 1956–2022" },
+    children: [
+      { file: "wildfires.png", title: "Global Wildfires, 2024" }
+    ]
+  },
+  {
+    theme: "Human footprint",
+    dir: "human_footprint",
+    parent: { file: "human_footprint.png", title: "The World at Night" },
+    children: [
+      { file: "china.png",               title: "Human Impact in China" },
+      { file: "africa.png",              title: "Human Impact in Africa" },
+      { file: "south_asia.png",          title: "Human Impact in South Asia" }
+    ]
+  },
+  {
+    theme: "Ocean science",
+    dir: "ocean_science",
+    parent: { file: "ocean_science.png", title: "Sea Surface Temperature in a Spilhaus Projection" },
+    children: []
+  }
+];
+
+/* ---- rendering + interaction (you shouldn't need to touch anything below) ---- */
+(function(){
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+  // Resolve the on-disk path for a map. The parent lives at the root; every
+  // child lives inside the group's folder (group.dir).
+  function parentPath(group){ return BASE + group.parent.file; }
+  function childPath(group, child){ return BASE + group.dir + "/" + child.file; }
+
+  // How many maps are in a theme's popup: the parent plus its children.
+  function themeCount(group){ return group.children.length + 1; }
+
+  /* ---- 1. render the gallery (one parent card per theme) ---- */
+  var galleryGrid = document.getElementById("galleryGrid");
+  MAPS.forEach(function(group, i){
+    var count = themeCount(group);
+    var label = esc(group.theme) + " · " + count + " maps";
+    var fig = document.createElement("figure");
+    fig.className = "reveal";
+    fig.innerHTML =
+      '<span class="thumb">' +
+        '<img src="' + parentPath(group) + '" alt="' + esc(group.parent.title) + '" loading="' + (i === 0 ? "eager" : "lazy") + '" />' +
+        '<span class="badge">' + label + ' →</span>' +
+      '</span>' +
+      '<figcaption class="figcap">' +
+        '<span class="t">' + esc(group.parent.title) + '</span>' +
+        '<span class="m">' + label + '</span>' +
+      '</figcaption>';
+    fig.addEventListener("click", function(){ openTheme(i); });
+    galleryGrid.appendChild(fig);
+  });
+
+  /* ---- 2. the popup (theme grid) ---- */
+  var modal = document.getElementById("modal");
+  var modalInner = modal.querySelector(".modal-inner");
+  var modalGrid = document.getElementById("modalGrid");
+  var modalTheme = document.getElementById("modalTheme");
+  var modalCount = document.getElementById("modalCount");
+
+  function openTheme(i){
+    var group = MAPS[i];
+    // The popup lists the parent first, then every child.
+    var entries = [{ path: parentPath(group), title: group.parent.title }];
+    group.children.forEach(function(c){ entries.push({ path: childPath(group, c), title: c.title }); });
+
+    modalTheme.textContent = group.theme;
+    modalCount.textContent = entries.length + " maps";
+    modalGrid.innerHTML = "";
+    entries.forEach(function(e){
+      var cell = document.createElement("figure");
+      cell.className = "mitem";
+      cell.innerHTML =
+        '<span class="mimg"><img src="' + e.path + '" alt="' + esc(e.title) + '" loading="lazy" /></span>' +
+        '<figcaption class="mt">' + esc(e.title) + '</figcaption>';
+      cell.addEventListener("click", function(){ openLight(e.path, e.title); });
+      modalGrid.appendChild(cell);
+    });
+
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    if (modalInner) modalInner.scrollTop = 0;
+  }
+  function closeModal(){
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+  // Click anywhere off the grid panel (the dark backdrop) to close.
+  modal.addEventListener("click", function(e){ if (e.target === modal) closeModal(); });
+  document.getElementById("modalClose").addEventListener("click", closeModal);
+
+  /* ---- 3. the lightbox (single enlarged map, above the popup) ---- */
+  var light = document.getElementById("light");
+  var lightImg = document.getElementById("lightImg");
+  var lightTitle = document.getElementById("lightTitle");
+
+  function openLight(path, title){
+    lightImg.src = path;
+    lightImg.alt = title;
+    lightTitle.textContent = title;
+    light.classList.add("open");
+    light.setAttribute("aria-hidden", "false");
+  }
+  function closeLight(){
+    light.classList.remove("open");
+    light.setAttribute("aria-hidden", "true");
+    lightImg.src = "";
+  }
+  // Click off the image (backdrop) to go back to the popup.
+  light.addEventListener("click", function(e){ if (e.target === light) closeLight(); });
+  document.getElementById("lightClose").addEventListener("click", closeLight);
+
+  /* ---- 4. Escape closes the top-most layer first ---- */
+  document.addEventListener("keydown", function(e){
+    if (e.key !== "Escape") return;
+    if (light.classList.contains("open")) closeLight();
+    else if (modal.classList.contains("open")) closeModal();
+  });
+
+  /* ---- 5. fade the gallery cards in on scroll (respects reduced-motion) ---- */
+  var cards = galleryGrid.querySelectorAll(".reveal");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced || !("IntersectionObserver" in window)){
+    cards.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: .12, rootMargin: "0px 0px -6% 0px" });
+    cards.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
 </html>
