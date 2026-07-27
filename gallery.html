@@ -68,7 +68,7 @@ nav{position:fixed;top:0;left:0;right:0;height:66px;z-index:100;display:flex;ali
 .reveal.in{opacity:1;transform:none}
 
 figure{margin:0}
-.thumb{position:relative;overflow:hidden;background:#000;display:block;cursor:pointer}
+.thumb{position:relative;overflow:hidden;background:#000;display:block;cursor:pointer;border-radius:10px}
 .thumb img{width:100%;height:auto;display:block;transition:transform .6s}
 figure:hover .thumb img{transform:scale(1.02)}
 .thumb .badge{position:absolute;left:0;right:0;bottom:0;padding:16px 16px 14px;font-size:12px;font-weight:500;
@@ -105,7 +105,7 @@ footer.site a:hover{color:var(--accent)}
 .modal-head .modal-cnt{margin-left:auto;font-size:13px;color:var(--muted);letter-spacing:.02em}
 .modal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
 .mitem{cursor:pointer}
-.mitem .mimg{aspect-ratio:4/3;overflow:hidden;background:#000;display:block}
+.mitem .mimg{aspect-ratio:4/3;overflow:hidden;background:#000;display:block;border-radius:8px}
 .mitem .mimg img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .5s}
 .mitem:hover .mimg img{transform:scale(1.04)}
 .mitem .mt{font-family:var(--disp);font-size:20px;color:var(--text);margin-top:8px;line-height:1.1}
@@ -203,200 +203,198 @@ footer.site a:hover{color:var(--accent)}
 <!-- gallery + popup + lightbox -->
 <script>
 /* ============================================================================
-   THE MAP MANIFEST — the single place you edit to change the gallery.
+   THE MAP MANIFEST - the single place to edit the gallery.
    ----------------------------------------------------------------------------
-   FILE LAYOUT ON DISK (under resources/images/fulls/):
-       world.png                <- a PARENT ("global") map, lives at the root
-       world/                   <- a folder named after that parent
-           china.png            <- CHILD maps of world.png live inside it
-           india.png
-           ...
-       co2.png                  <- another parent
-       co2/ch4.png, co2/CO.png  <- its children
-   Rule: every parent's `file` sits at the root; its `dir` is a folder of the
-   same name holding that theme's child maps.
+   Each gallery parent is a descriptively named JPEG at the root of `fulls`.
+   Its related maps live in a folder with the same filename stem:
 
-   HOW TO ADD A NEW MAP TO AN EXISTING THEME
-       1. Drop the image file into that theme's folder, e.g.
-          resources/images/fulls/world/spain.png
-       2. Add one line to that group's `children` array below:
-          { file: "spain.png", title: "Spain" }
-       Done. It appears in the theme's popup automatically.
+       world_rivers.jpg
+       world_rivers/
+         africa.jpg
+         asia.jpg
 
-   HOW TO ADD A WHOLE NEW THEME
-       1. Put the parent (global) image at the root:
-          resources/images/fulls/rivers.png
-       2. Make its folder and put the child maps inside:
-          resources/images/fulls/rivers/amazon.png  (etc.)
-       3. Add a new group object to MAPS below:
-          {
-            theme: "Rivers",                              // label shown on the site
-            dir: "rivers",                                // must match the folder name
-            parent: { file: "rivers.png", title: "The World's Rivers" },
-            children: [ { file: "amazon.png", title: "The Amazon" } ]
-          }
+   Standalone maps also have a matching folder. That folder contains no map
+   files until related work is added (a `.gitkeep` preserves it in Git).
 
-   NOTES
-     - The gallery shows ONLY each group's `parent`. The children are hidden and
-       appear only inside that parent's popup (the popup also includes the parent).
-     - Order of groups here = order of maps on the page.
-     - Titles may contain characters like & or ₂; they are escaped/handled for you.
+   To add a related map:
+     1. Put the JPEG in the parent's matching folder.
+     2. Add its filename and title to that group's `children` array.
+
+   The gallery displays one parent card per group. Clicking it opens a popup
+   containing the parent followed by its children.
    ========================================================================== */
 var BASE = "resources/images/fulls/";
 
 var MAPS = [
   {
-    theme: "Water Risk",
-    dir: "water_risk",
-    parent: { file: "water_risk.jpg", title: "Global Water Risk" },
+    theme: "Water risk",
+    dir: "global_water_risk",
+    parent: { file: "global_water_risk.jpg", title: "Global Water Risk" },
     children: [
-      { file: "samerica.jpg",         title: "South America" },
-      { file: "namerica.jpg",         title: "North America" },
-      { file: "asia.jpg",             title: "Asia" },
-      { file: "europe.jpg",           title: "Europe" },
-      { file: "africa.jpg",           title: "Africa" },
-      { file: "oceania.jpg",          title: "Oceania" }
+      { file: "south_america.jpg", title: "South America" },
+      { file: "north_america.jpg", title: "North America" },
+      { file: "asia.jpg",          title: "Asia" },
+      { file: "europe.jpg",        title: "Europe" },
+      { file: "africa.jpg",        title: "Africa" },
+      { file: "oceania.jpg",       title: "Oceania" }
     ]
-  },  {
+  },
+  {
     theme: "Rivers",
-    dir: "rivers",
-    parent: { file: "rivers.png", title: "The World's Rivers" },
+    dir: "world_rivers",
+    parent: { file: "world_rivers.jpg", title: "The World's Rivers" },
     children: [
-      { file: "africa.jpeg",        title: "Africa" },
-      { file: "asia.jpeg",          title: "Asia" },
-      { file: "europe.jpeg",        title: "Europe" },
-      { file: "north_america.jpeg", title: "North America" },
-      { file: "south_america.jpeg", title: "South America" }
+      { file: "africa.jpg",        title: "Africa" },
+      { file: "asia.jpg",          title: "Asia" },
+      { file: "europe.jpg",        title: "Europe" },
+      { file: "north_america.jpg", title: "North America" },
+      { file: "south_america.jpg", title: "South America" }
     ]
   },
   {
     theme: "River temperature",
-    dir: "river_temperature",
-    parent: { file: "river_temperature.jpg", title: "Global Minimum River Temperature" },
+    dir: "global_river_temperature",
+    parent: { file: "global_river_temperature.jpg", title: "Global Minimum River Temperature" },
     children: [
-      { file: "africa.png",         title: "Africa" },
-      { file: "asia.png",           title: "Asia" },
-      { file: "europe.png",         title: "Europe" },
-      { file: "north_america.png",  title: "North America" },
-      { file: "oceania.png",        title: "Oceania" },
-      { file: "south_america.jpeg", title: "South America" }
-    ]
-  },
-    {
-    theme: "Forests",
-    dir: "forests",
-    parent: { file: "world_forests.jpg", title: "Global Forest Cover" },
-    children: [
-      { file: "africa.png",    title: "Africa" },
-      { file: "europe.jpeg",   title: "Europe" },
-      { file: "namerica.jpeg", title: "North America" },
-      { file: "samerica.jpeg", title: "South America" }
-    ]
-  },
-    {
-    theme: "Forest Type",
-    dir: "forests",
-    parent: { file: "combined.jpg", title: "Global Forest Cover broken down by forest type" },
-    children: [
+      { file: "africa.jpg",        title: "Africa" },
+      { file: "asia.jpg",          title: "Asia" },
+      { file: "europe.jpg",        title: "Europe" },
+      { file: "north_america.jpg", title: "North America" },
+      { file: "oceania.jpg",       title: "Oceania" }
     ]
   },
   {
-    theme: "Population density",
-    dir: "population",
-    parent: { file: "world.png", title: "World Population Density" },
+    theme: "Forest cover",
+    dir: "world_forest_cover",
+    parent: { file: "world_forest_cover.jpg", title: "Global Forest Cover" },
     children: [
-      { file: "china.png",         title: "China" },
-      { file: "india.png",         title: "India" },
-      { file: "usa.png",           title: "United States" },
-      { file: "europe.png",        title: "Europe" },
-      { file: "africa.png",        title: "Africa" },
-      { file: "japan.png",         title: "Japan" },
-      { file: "brazil.png",        title: "Brazil" },
-      { file: "egypt.png",         title: "Egypt" },
-      { file: "se_asia.png",       title: "Southeast Asia" },
-      { file: "north_america.png", title: "North America" },
-      { file: "south_america.png", title: "South America" },
-      { file: "middle_east.png",   title: "Middle East" },
-      { file: "bangladesh.png",    title: "Bangladesh" },
-      { file: "pakistan.png",      title: "Pakistan" },
-      { file: "raj.png",           title: "The British Raj" }
+      { file: "africa.jpg",        title: "Africa" },
+      { file: "europe.jpg",        title: "Europe" },
+      { file: "north_america.jpg", title: "North America" },
+      { file: "south_america.jpg", title: "South America" }
     ]
   },
   {
-    theme: "Emissions",
-    dir: "co2",
-    parent: { file: "co2.png", title: "Global CO₂ Emissions" },
-    children: [
-      { file: "ch4.png", title: "Global Methane Emissions" },
-      { file: "CO.png",  title: "Global Carbon Monoxide Emissions" }
-    ]
-  },
-  {
-    theme: "Aviation",
-    dir: "airways_airports",
-    parent: { file: "airways_airports.png", title: "Airports & Airways" },
-    children: [
-      { file: "airways.png",       title: "The World's Airways" },
-      { file: "airports_dark.png", title: "The World's Airports" }
-    ]
-  },
-  {
-    theme: "Maritime & sea",
-    dir: "shipping_lanes",
-    parent: { file: "shipping_lanes.png", title: "The World's Shipping Lanes" },
-    children: [
-      { file: "Ports.png",              title: "The World's Ports" },
-      { file: "eez_dark.png",           title: "Exclusive Economic Zones" },
-      { file: "distance_from_port.png", title: "Distance from Port" }
-    ]
-  },
-  {
-    theme: "Infrastructure & networks",
-    dir: "power_lines",
-    parent: { file: "power_lines.png", title: "Global Power Infrastructure" },
-    children: [
-      { file: "undersea_cables_dark.png", title: "The World's Undersea Cables" },
-      { file: "pipelines.png",            title: "The World's Pipelines" },
-      { file: "World_railways.png",       title: "The World's Railways" },
-      { file: "power_plants.png",         title: "The World's Power Plants" }
-    ]
-  },
-  {
-    theme: "Roads",
-    dir: "roads",
-    parent: { file: "roads.png", title: "The World's Roads" },
-    children: [
-      { file: "europe_vc1.png", title: "Europe" }
-    ]
-  },
-  {
-    theme: "Agriculture & land",
-    dir: "agriculture",
-    parent: { file: "agriculture.png", title: "Global Livestock Density" },
+    theme: "Forest types",
+    dir: "world_forest_types",
+    parent: { file: "world_forest_types.jpg", title: "Global Forest Types" },
     children: []
   },
   {
-    theme: "Natural hazards",
-    dir: "natural_hazards",
-    parent: { file: "natural_hazards.png", title: "Global Earthquakes, 1956–2022" },
+    theme: "Population density",
+    dir: "world_population_density",
+    parent: { file: "world_population_density.jpg", title: "World Population Density" },
+    children: []
+  },
+  {
+    theme: "Emissions",
+    dir: "global_co2_emissions",
+    parent: { file: "global_co2_emissions.jpg", title: "Global CO₂ Emissions" },
     children: [
-      { file: "wildfires.png", title: "Global Wildfires, 2024" }
+      { file: "global_methane_emissions.jpg",         title: "Global Methane Emissions" },
+      { file: "global_carbon_monoxide_emissions.jpg", title: "Global Carbon Monoxide Emissions" }
     ]
   },
   {
-    theme: "Human footprint",
-    dir: "human_footprint",
-    parent: { file: "human_footprint.png", title: "The World at Night" },
+    theme: "Livestock",
+    dir: "world_livestock",
+    parent: { file: "world_livestock.jpg", title: "Global Livestock Distribution" },
     children: [
-      { file: "china.png",               title: "Human Impact in China" },
-      { file: "africa.png",              title: "Human Impact in Africa" },
-      { file: "south_asia.png",          title: "Human Impact in South Asia" }
+      { file: "buffalo.jpg",        title: "Buffalo" },
+      { file: "cattle.jpg",         title: "Cattle" },
+      { file: "chickens.jpg",       title: "Chickens" },
+      { file: "ducks.jpg",          title: "Ducks" },
+      { file: "goats.jpg",          title: "Goats" },
+      { file: "horses.jpg",         title: "Horses" },
+      { file: "pigs.jpg",           title: "Pigs" },
+      { file: "sheep.jpg",          title: "Sheep" },
+      { file: "world_pastures.jpg", title: "Global Pastures" }
     ]
   },
   {
-    theme: "Ocean science",
-    dir: "ocean_science",
-    parent: { file: "ocean_science.png", title: "Sea Surface Temperature in a Spilhaus Projection" },
+    theme: "Airways & airports",
+    dir: "world_airways_airports",
+    parent: { file: "world_airways_airports.jpg", title: "The World's Airways and Airports" },
+    children: []
+  },
+  {
+    theme: "Airways",
+    dir: "world_airways",
+    parent: { file: "world_airways.jpg", title: "The World's Airways" },
+    children: []
+  },
+  {
+    theme: "Shipping lanes",
+    dir: "world_shipping_lanes",
+    parent: { file: "world_shipping_lanes.jpg", title: "The World's Shipping Lanes" },
+    children: [
+      { file: "historic_shipping_lanes_1800s.jpg", title: "Shipping Lanes in the 1800s" },
+      { file: "shipping_lanes_spilhaus.jpg",       title: "Shipping Lanes in a Spilhaus Projection" },
+      { file: "world_ports.jpg",                   title: "The World's Ports" },
+      { file: "distance_from_port.jpg",            title: "Distance from Port" },
+      { file: "exclusive_economic_zones.jpg",      title: "Exclusive Economic Zones" }
+    ]
+  },
+  {
+    theme: "Shipping & airways",
+    dir: "world_shipping_airways",
+    parent: { file: "world_shipping_airways.jpg", title: "Shipping Lanes and Airways" },
+    children: []
+  },
+  {
+    theme: "Roads",
+    dir: "world_roads",
+    parent: { file: "world_roads.jpg", title: "The World's Roads" },
+    children: [
+      { file: "europe.jpg", title: "Europe" }
+    ]
+  },
+  {
+    theme: "Power lines",
+    dir: "world_power_lines",
+    parent: { file: "world_power_lines.jpg", title: "Global Power Lines" },
+    children: []
+  },
+  {
+    theme: "Undersea cables",
+    dir: "world_undersea_cables",
+    parent: { file: "world_undersea_cables.jpg", title: "The World's Undersea Cables" },
+    children: []
+  },
+  {
+    theme: "Korea at night",
+    dir: "korea_at_night",
+    parent: { file: "korea_at_night.jpg", title: "Korea at Night" },
+    children: []
+  },
+  {
+    theme: "Middle East conflict",
+    dir: "middle_east_conflict",
+    parent: { file: "middle_east_conflict.jpg", title: "Conflict Activity in the Middle East" },
+    children: []
+  },
+  {
+    theme: "South America conflict",
+    dir: "south_america_conflict",
+    parent: { file: "south_america_conflict.jpg", title: "Conflict Activity in South America" },
+    children: []
+  },
+  {
+    theme: "US election",
+    dir: "us_election_choropleth",
+    parent: { file: "us_election_choropleth.jpg", title: "2024 US Election: Choropleth" },
+    children: []
+  },
+  {
+    theme: "US election",
+    dir: "us_election_dot_density",
+    parent: { file: "us_election_dot_density.jpg", title: "2024 US Election: Dot Density" },
+    children: []
+  },
+  {
+    theme: "Earthquakes",
+    dir: "global_earthquakes",
+    parent: { file: "global_earthquakes.jpg", title: "Global Earthquakes, 1956-2022" },
     children: []
   }
 ];
@@ -417,7 +415,7 @@ var MAPS = [
   var galleryGrid = document.getElementById("galleryGrid");
   MAPS.forEach(function(group, i){
     var count = themeCount(group);
-    var label = esc(group.theme) + " · " + count + " maps";
+    var label = esc(group.theme) + " · " + count + " " + (count === 1 ? "map" : "maps");
     var fig = document.createElement("figure");
     fig.className = "reveal";
     fig.innerHTML =
@@ -447,7 +445,7 @@ var MAPS = [
     group.children.forEach(function(c){ entries.push({ path: childPath(group, c), title: c.title }); });
 
     modalTheme.textContent = group.theme;
-    modalCount.textContent = entries.length + " maps";
+    modalCount.textContent = entries.length + " " + (entries.length === 1 ? "map" : "maps");
     modalGrid.innerHTML = "";
     entries.forEach(function(e){
       var cell = document.createElement("figure");
