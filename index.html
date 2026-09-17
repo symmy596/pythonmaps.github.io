@@ -135,6 +135,18 @@ figure.plate{margin:0}
 .commission .retainer{color:var(--muted);max-width:64ch;font-style:italic;margin-top:10px}
 .commission .prompt{color:var(--text);max-width:60ch;margin-top:34px;opacity:.92}
 
+/* technical advisory — intentionally contained to one section */
+.advisory{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.advisory .lead{font-size:clamp(18px,2vw,21px);color:var(--text);max-width:68ch;line-height:1.62}
+.advisory-offers{display:grid;grid-template-columns:repeat(2,1fr);margin:48px 0 42px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.advisory-offer{padding:30px 34px 32px 0;border-bottom:1px solid var(--line)}
+.advisory-offer:nth-child(even){padding-left:34px;border-left:1px solid var(--line)}
+.advisory-offer:nth-last-child(-n+2){border-bottom:0}
+.advisory-offer h3{font-size:27px;line-height:1.1;margin-bottom:10px}
+.advisory-offer p{font-size:15px;color:var(--muted);line-height:1.62;max-width:50ch}
+.advisory-close{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.advisory-close p{font-size:15px;color:var(--muted);max-width:57ch}
+
 /* about */
 .about-grid{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:clamp(36px,6vw,80px);align-items:start}
 .about-photo img{width:100%;height:auto;display:block;border:1px solid var(--line)}
@@ -161,6 +173,7 @@ footer.site a:hover{color:var(--accent)}
 
 @media(max-width:860px){.engagements{grid-template-columns:1fr}
   .eng{border-left:none;border-top:1px solid var(--line)}.eng:first-child{border-top:none}
+  .advisory-offers{grid-template-columns:1fr}.advisory-offer,.advisory-offer:nth-child(even){padding:26px 0;border-left:0;border-bottom:1px solid var(--line)}.advisory-offer:last-child{border-bottom:0}
   .about-grid{grid-template-columns:1fr;gap:36px}.about-photo{max-width:280px}
   .book .wrap{grid-template-columns:1fr;justify-items:center;text-align:center}.book-text{align-items:center}}
 @media(max-width:720px){.nav-links{display:none}.burger{display:block}
@@ -177,6 +190,7 @@ footer.site a:hover{color:var(--accent)}
   <a href="#top" class="brand">PythonMaps</a>
   <div class="nav-links">
     <a href="gallery.html">Gallery</a>
+    <a href="#advisory">Advisory</a>
     <a href="#commission">Commission</a>
     <a href="#about">About</a>
     <a href="#book">Book</a>
@@ -187,6 +201,7 @@ footer.site a:hover{color:var(--accent)}
 <div class="overlay" id="overlay">
   <button class="x" id="closeMenu" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
   <a href="gallery.html">Gallery</a>
+  <a href="#advisory">Advisory</a>
   <a href="#commission">Commission</a>
   <a href="#about">About</a>
   <a href="#book">Book</a>
@@ -250,6 +265,29 @@ footer.site a:hover{color:var(--accent)}
     <div class="close reveal">
       <div class="price">From $250<span>Most commissions delivered within one to two weeks.</span></div>
       <a href="mailto:adam@pythonmaps.com?subject=Map%20commission%20enquiry&body=Hi%20Adam%2C%0D%0A%0D%0AThe%20dataset%20(or%20a%20link%20to%20it)%3A%20%0D%0AThe%20format%20I%20need%20(print%20%2F%20web%20%2F%20social%2C%20and%20size)%3A%20%0D%0AMy%20deadline%3A%20%0D%0AAnything%20else%20I%20should%20know%3A%20%0D%0A" class="btn">Start a commission →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL ADVISORY -->
+<section id="advisory" class="advisory">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Technical advisory</span>
+      <h2>Geospatial, maritime &amp; AI</h2>
+    </div>
+    <p class="lead reveal">Alongside PythonMaps, I advise founders, CTOs, investors and technical leaders working through difficult questions in maritime data, Earth observation, spatial architecture and applied AI.</p>
+
+    <div class="advisory-offers reveal">
+      <div class="advisory-offer"><h3>Architecture review</h3><p>Independent review of geospatial or maritime data platforms, pipelines and technical choices.</p></div>
+      <div class="advisory-offer"><h3>Cost &amp; performance</h3><p>Focused analysis of spatial workloads, cloud spend, data architecture and scaling constraints.</p></div>
+      <div class="advisory-offer"><h3>AI product advice</h3><p>Technical and product guidance for AIS, satellite imagery, SAR, Earth observation and AI systems.</p></div>
+      <div class="advisory-offer"><h3>Due diligence &amp; leadership</h3><p>Technical assessment for investors, or fractional support through an important product or platform decision.</p></div>
+    </div>
+
+    <div class="advisory-close reveal">
+      <p>Engagements are usually short and focused, with clear findings and practical recommendations.</p>
+      <a href="mailto:adam@pythonmaps.com?subject=Technical%20advisory%20enquiry" class="btn">Discuss a project →</a>
     </div>
   </div>
 </section>
